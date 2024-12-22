@@ -11,7 +11,10 @@ const BackgroundHome = styled.div`
     left: 50%;
     top: 0;
     background: #000;
-    display: none;
+
+    @media (max-width: 768px){
+        display: none;
+    }
 
     &::before{
         content: '';
