@@ -46,7 +46,7 @@ const InicialContainer = styled.section`
 
     @media (max-width: 768px) {
         flex-direction: column-reverse;
-        height: auto;
+        height: 100dvh;
         padding: 10% 5%;
         background: #000;
     }
@@ -188,6 +188,11 @@ const InicialDiv = styled.div`
     height: 50px;
 
     @media (max-width: 768px) {
+        border: 1px solid red;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+        width: 250px!important;
         display: none!important;
     }
 
@@ -203,6 +208,7 @@ const InicialDiv = styled.div`
 
         @media (max-width: 768px) {
             left: 0px;
+            border: 1px solid red;
         }
 
         & > span {
@@ -226,32 +232,74 @@ const InicialDiv = styled.div`
         border-radius: 50%;
         position: absolute;
 
+        @media (max-width:768px) {
+            border: 1px solid red;
+        }
+
         &:nth-child(1){
             top: 0;
             left: 0;
             z-index: 1;
-            background-color: #ffffff;
+            background-image: url('https://res.cloudinary.com/dabucfkmg/image/upload/v1734834438/perfil1_hvoboh.jpg');
+            background-position: center;
+            background-size: cover;
+            opacity: 0.6;
+            transition: all .2s ease;
+
+            &:hover{
+                z-index: 4;
+                opacity: 1;
+                transform: translateY(-5px) scale(1.05);
+            }
         }
 
         &:nth-child(2){
             top: 0;
             left: 20px;
             z-index: 2;
-            background-color: #ffffff80;
+            background-image: url('https://res.cloudinary.com/dabucfkmg/image/upload/v1734834439/perfil3_qg8mhu.jpg');
+            background-position: center;
+            background-size: cover;
+            opacity: .7;
+            transition: all .2s ease;
+
+            &:hover{
+                z-index: 4;
+                opacity: 1;
+                transform: translateY(-5px) scale(1.05);
+            }
         }
 
         &:nth-child(3){
             top: 0;
             left: 40px;
             z-index: 3;
-            background-color: #ffffff60;
+            background-image: url('https://res.cloudinary.com/dabucfkmg/image/upload/v1734834439/perfil2_yhzm7x.jpg');
+            background-position: center;
+            background-size: cover;
+            opacity: .8;
+            transition: all .2s ease;
+
+            &:hover{
+                z-index: 5;
+                opacity: 1;
+                transform: translateY(-5px) scale(1.05);
+            }
         }
 
         &:nth-child(4){
             top: 0;
             left: 60px;
             z-index: 4;
-            background-color: #ffffff40;
+            background-image: url('https://res.cloudinary.com/dabucfkmg/image/upload/v1734834440/perfil4_smjprm.jpg');
+            background-position: center;
+            background-size: cover;
+            opacity: 1;
+            transition: all .2s ease;
+
+            &:hover{
+                transform: translateY(-5px) scale(1.05);
+            }
         }
     }
 `
