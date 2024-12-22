@@ -27,6 +27,7 @@ const BackgroundHome = styled.div`
         top: 0;
         left: 0;
         opacity: .3;
+        border-image: fill 0 linear-gradient(#0000, #000);
     }
 `
 
@@ -63,6 +64,7 @@ const InicialContainer = styled.section`
             top: 0;
             left: 0;
             opacity: .3;
+            border-image: fill 0 linear-gradient(#0000, #000);
         }
     }
 `
