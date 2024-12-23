@@ -40,6 +40,11 @@ const Container = styled.div`
       object-fit: contain;
       width: 25px;
       height: 25px;
+
+      @media (max-width: 768px) {
+        width: 20px;
+        height: 20px;
+      }
     }
 
     h3 {
@@ -47,6 +52,10 @@ const Container = styled.div`
       font-family: var(--font--poppins);
       font-weight: 400;
       color: var(--color--white);
+
+      @media (max-width: 768px) {
+        font-size: 16px;
+      }
     }
   }
 `;
@@ -68,7 +77,7 @@ const FaixaClara = () => {
         pagination={false} // Adiciona a paginação
         breakpoints={{
         0: {
-            slidesPerView: 1, // Exibe 1 slide por vez no mobile
+            slidesPerView: 2, // Exibe 1 slide por vez no mobile
             spaceBetween: 10, // Menor espaço entre os slides no mobile
         },
         1080: {
