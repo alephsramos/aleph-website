@@ -39,8 +39,9 @@ const VantagensBackground = styled.div`
 const VantagensContainer = styled.section`
   width: 100%;
   position: relative;
-  height: 140vh;
+  height: auto;
   z-index: 2;
+  padding: 5% 0;
 
   @media (max-width: 768px){
     background: #000;
