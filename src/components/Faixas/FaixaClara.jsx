@@ -77,7 +77,7 @@ const FaixaClara = () => {
         pagination={false} // Adiciona a paginação
         breakpoints={{
         0: {
-            slidesPerView: 2, // Exibe 1 slide por vez no mobile
+            slidesPerView: 1, // Exibe 1 slide por vez no mobile
             spaceBetween: 10, // Menor espaço entre os slides no mobile
         },
         1080: {

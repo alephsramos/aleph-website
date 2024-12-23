@@ -6,6 +6,9 @@ import { Autoplay, FreeMode, Pagination } from "swiper/modules"; // para autopla
 import "swiper/css"; // CSS base do Swiper
 import "swiper/css/pagination";
 
+import { BsArrowDown } from "react-icons/bs";
+
+
 const PortfolioAll = styled.section`
     width: 100%;
     max-width: 1280px;
@@ -126,6 +129,19 @@ const PortfolioCarrossel = styled.div`
     }
 `
 
+const PortfolioSeta = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 50px;
+
+    & > a{
+        font-size: 32px;
+        color: var(--color--purple);
+        opacity: 0.4;
+    }
+`
 
 
 const Portfolio = () => {
@@ -222,6 +238,12 @@ const Portfolio = () => {
                     </SwiperSlide>
                 </Swiper>
                 </PortfolioCarrossel>
+
+                <PortfolioSeta>
+                    <a href="#">
+                        <BsArrowDown />
+                    </a>
+                </PortfolioSeta>
             </PortfolioAll>
         </>
     )
