@@ -165,7 +165,7 @@ const Paraquem = () => {
                     />
 
                     <ParaquemCard2>
-                        <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1734959436/pessoas1_mzx60k.jpg" />
+                        <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1734959437/pessoas2_rcc7yv.jpg" />
                     </ParaquemCard2>
                 </ParaquemCards2>
             </ParaquemAll>

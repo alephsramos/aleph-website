@@ -17,7 +17,7 @@ const Container = styled.div`
   background: linear-gradient(90deg, var(--color--purple), #dbdbdb, var(--color--blue));
 
   @media (max-width: 768px){
-    height: 7vh;
+    height: 5vh;
   }
 
   // Importante: se quiser manter esse estilo, aplique no conteúdo interno ou nos .swiper-slide

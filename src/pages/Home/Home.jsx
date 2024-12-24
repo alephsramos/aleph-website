@@ -5,6 +5,7 @@ import Vantagens from "./Vantagens";
 import FaixaClara from "../../components/Faixas/FaixaClara";
 import Portfolio from "./Portfolio";
 import Paraquem from "./Paraquem";
+import Beneficios from "./Beneficios";
 
 const Home = () => {
     return (
@@ -15,6 +16,8 @@ const Home = () => {
                     <FaixaClara />
                         <Portfolio />
                             <Paraquem />
+                            <FaixaClara />
+                                <Beneficios /> 
         </>
     )
 }

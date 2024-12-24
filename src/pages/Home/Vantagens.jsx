@@ -134,6 +134,10 @@ const VantagensCarrossel = styled.div`
   position: relative; /* Necessário para o posicionamento absoluto do degradê */
   overflow: hidden; /* Garante que o efeito de degradê não ultrapasse os limites */
 
+  @media (max-width: 768px) {
+    gap: -50px!important;
+  }
+
   /* Degradê aplicado apenas nos cantos */
   &::before {
     content: "";
@@ -212,7 +216,7 @@ const Vantagens = () => {
                   />
                   <CardVantagensSmall
                     title="Velocidade de entrega"
-                    description="O tempo mais acessível para você ter seu projeto em mãos o mais rápido possível, porém dependendo do seu projeto, consulte mais em pacotes."
+                    description="O tempo mais acessível para você ter seu projeto em mãos o mais rápido possível."
                   />
                 </div>
               </StyledSwiperSlide>
@@ -221,7 +225,7 @@ const Vantagens = () => {
                 <div>
                   <CardVantagensSmall
                     title="Velocidade de entrega"
-                    description="O tempo mais acessível para você ter seu projeto em mãos o mais rápido possível, porém dependendo do seu projeto, consulte mais em pacotes."
+                    description="O tempo mais acessível para você ter seu projeto em mãos o mais rápido possível."
                   />
                   <CardVantagens
                     title="Velocidade de entrega"
@@ -238,7 +242,7 @@ const Vantagens = () => {
                   />
                   <CardVantagensSmall
                     title="Velocidade de entrega"
-                    description="O tempo mais acessível para você ter seu projeto em mãos o mais rápido possível, porém dependendo do seu projeto, consulte mais em pacotes."
+                    description="O tempo mais acessível para você ter seu projeto em mãos o mais rápido possível."
                   />
                 </div>
               </StyledSwiperSlide>
@@ -247,7 +251,7 @@ const Vantagens = () => {
                 <div>
                   <CardVantagensSmall
                     title="Velocidade de entrega"
-                    description="O tempo mais acessível para você ter seu projeto em mãos o mais rápido possível, porém dependendo do seu projeto, consulte mais em pacotes."
+                    description="O tempo mais acessível para você ter seu projeto em mãos o mais rápido possível."
                   />
                   <CardVantagens
                     title="Velocidade de entrega"
@@ -264,7 +268,7 @@ const Vantagens = () => {
                   />
                   <CardVantagensSmall
                     title="Velocidade de entrega"
-                    description="O tempo mais acessível para você ter seu projeto em mãos o mais rápido possível, porém dependendo do seu projeto, consulte mais em pacotes."
+                    description="O tempo mais acessível para você ter seu projeto em mãos o mais rápido possível."
                   />
                 </div>
               </StyledSwiperSlide>

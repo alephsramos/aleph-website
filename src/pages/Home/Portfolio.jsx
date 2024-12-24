@@ -134,7 +134,7 @@ const PortfolioSeta = styled.div`
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin-top: 50px;
+    margin-top: 10px;
 
     & > a{
         font-size: 32px;

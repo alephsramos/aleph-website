@@ -12,3 +12,17 @@
 
     --degrade--1: "linear-gradient (120deg, var(--color--purple), var(--color--blue))";
 }
+
+* {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(var(--color--purple), #353535, var(--color--blue));
+    border-radius: 20px;
+}

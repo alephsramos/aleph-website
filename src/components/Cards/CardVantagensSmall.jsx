@@ -18,6 +18,7 @@ const CardContainer = styled.div`
 
   @media (max-width: 768px){
     width: 100%;
+    height: 220px;
   }
 
   & > h1{
@@ -29,6 +30,10 @@ const CardContainer = styled.div`
     font-family: var(--font--poppins);
     font-weight: 600;
     height: 20%;
+
+    @media (max-width: 768px) {
+      font-size: 20px;
+    }
   }
 
   & > p {
@@ -37,6 +42,10 @@ const CardContainer = styled.div`
     font-family: var(--font--poppins);
     font-weight: 300;
     line-height: 130%;
+
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
   }
 
   
@@ -57,6 +66,7 @@ const CardContainer = styled.div`
 
     @media (max-width: 768px){
       width: 103%;
+      height: 230px;
     }
   }
 
@@ -78,7 +88,7 @@ const CardContainer = styled.div`
     transform: rotate(-90deg) scaleX(1) scaleY(1);
 
     @media (max-width: 768px){
-      transform: rotate(-90deg) scaleX(0.86) scaleY(1.17);
+      transform: rotate(-90deg) scaleX(0.63) scaleY(1.57);
     }
   }
 

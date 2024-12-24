@@ -129,16 +129,17 @@ const InicialTexts = styled.div`
         color: var(--color--white);
         font-size: 16px;
         line-height: 120%;
-        font-family: var(--font--roboto);
+        font-family: var(--font--poppins);
         opacity: .6;
         width: 95%;
 
         @media (max-width: 768px) {
             width: 100%;
             text-align: center;
-            opacity: .8;
+            opacity: 0.8;
             font-size: 14px;
             font-weight: 100;
+            line-height: 120%;
         }
     }
 
@@ -157,6 +158,7 @@ const InicialTexts = styled.div`
             width: 100%;
             font-size: 12px;
             font-weight: 100;
+            opacity: .6;
         }
     }
 `
