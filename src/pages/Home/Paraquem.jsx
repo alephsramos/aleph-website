@@ -17,7 +17,7 @@ const ParaquemAll = styled.section `
     gap: 50px;
 
     @media (max-width: 768px) {
-        padding: 0 2.5% 5% 2.5%;
+        padding: 0 2.5% 10% 2.5%;
     }
 
 `

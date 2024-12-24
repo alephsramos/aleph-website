@@ -5,18 +5,30 @@ const HeaderContainer = styled.header`
   width: 95%;
   max-width: 1140px;
   height: 8vh;
-  transform: translateX(-50%);
+  position: fixed;
   left: 50%;
   top: 0;
-  position: fixed;
+  transform: translateX(-50%);
+
   border-radius: 0 0 15px 15px;
   background-color: #00000050;
   backdrop-filter: blur(4px);
+
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 100;
-  transition: opacity 1s ease;
+
+  /* Transição suave para subir/descer */
+  transition: transform 0.4s ease;
+
+  /* Quando scrolling = true, o header sobe (-100%) */
+  /* Quando scrolling = false, ele volta para 0 */
+  transform: ${({ scrolling }) =>
+    scrolling
+      ? 'translateX(-50%) translateY(-100%)'
+      : 'translateX(-50%) translateY(0)'
+  };
 `
 
 const HeaderImage = styled.div`
@@ -42,10 +54,17 @@ function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
+      // O usuário está rolando, então header sobe
       setScrolling(true)
+
+      // Reinicia o timer de 3 segundos
       if (timerRef.current) clearTimeout(timerRef.current)
-      timerRef.current = setTimeout(() => setScrolling(false), 500)
+      timerRef.current = setTimeout(() => {
+        // 3 segundos depois de parar de rolar, header desce
+        setScrolling(false)
+      }, 1000)
     }
+
     window.addEventListener("scroll", handleScroll)
     return () => {
       window.removeEventListener("scroll", handleScroll)
@@ -54,7 +73,7 @@ function Header() {
   }, [])
 
   return (
-    <HeaderContainer style={{ opacity: scrolling ? 0.4 : 1 }}>
+    <HeaderContainer scrolling={scrolling}>
       <HeaderImage>
         <a href="#">
           <img

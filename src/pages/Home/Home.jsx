@@ -9,6 +9,7 @@ import Paraquem from "./Paraquem";
 import Beneficios from "./Beneficios";
 import Depoimentos from "./Depoimentos";
 import FaixaEscura from "../../components/Faixas/FaixaEscura";
+import Pacotes from "./Pacotes";
 
 const Home = () => {
     return (
@@ -23,6 +24,7 @@ const Home = () => {
                                 <Beneficios />
                                     <Depoimentos /> 
                                     <FaixaEscura />
+                                        <Pacotes />
         </>
     )
 }
