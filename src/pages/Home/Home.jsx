@@ -12,6 +12,7 @@ import FaixaEscura from "../../components/Faixas/FaixaEscura";
 import Pacotes from "./Pacotes";
 import Parceria from "./Parceria";
 import FAQ from "./FAQ";
+import Formulario from "./Formulario";
 
 const Home = () => {
     return (
@@ -30,6 +31,8 @@ const Home = () => {
                                             <Parceria />
                                             <FaixaClara />
                                                 <FAQ />
+                                                <FaixaEscura />
+                                                    <Formulario /> 
         </>
     )
 }
