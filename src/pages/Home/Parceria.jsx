@@ -7,7 +7,7 @@ import { BsCash, BsShieldLock, BsAward, BsBuildings } from "react-icons/bs";
 const ParceriaContainer = styled.section `
     width: 100%;
     max-width: 1280px;
-    padding: 0 5%;
+    padding: 0 5% 5% 5%;
     height: auto;
     display: flex;
     align-items: center;
@@ -16,6 +16,7 @@ const ParceriaContainer = styled.section `
     left: 50%;
     top: 0;
     position: relative;
+    z-index: 10;
 
     @media (max-width: 768px){
         padding: 5%;
@@ -24,12 +25,14 @@ const ParceriaContainer = styled.section `
 
 const ParceriaDiv = styled.div`
     width: 100%;
-    background-color: var(--color--black);
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-radius: 30px;
     gap: 50px;
+    position: relative;
+    z-index: 3;
+    background-color: var(--color--black);
 
     @media (max-width: 768px){
         flex-direction: column;
