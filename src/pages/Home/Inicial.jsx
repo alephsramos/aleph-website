@@ -138,7 +138,7 @@ const InicialTexts = styled.div`
             text-align: center;
             opacity: 0.8;
             font-size: 14px;
-            font-weight: 100;
+            font-weight: 200;
             line-height: 120%;
         }
     }

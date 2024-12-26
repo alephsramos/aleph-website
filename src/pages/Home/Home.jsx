@@ -10,6 +10,7 @@ import Beneficios from "./Beneficios";
 import Depoimentos from "./Depoimentos";
 import FaixaEscura from "../../components/Faixas/FaixaEscura";
 import Pacotes from "./Pacotes";
+import Parceria from "./Parceria";
 
 const Home = () => {
     return (
@@ -25,6 +26,7 @@ const Home = () => {
                                     <Depoimentos /> 
                                     <FaixaEscura />
                                         <Pacotes />
+                                            <Parceria />
         </>
     )
 }
