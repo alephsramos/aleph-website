@@ -2,22 +2,26 @@ import React, { useState, useEffect, useRef } from "react"
 import styled from "styled-components"
 
 const HeaderContainer = styled.header`
-  width: 95%;
+  width: auto;
   max-width: 1140px;
-  height: 8vh;
+  height: 5vh;
   position: fixed;
   left: 50%;
-  top: 0;
+  padding: 10px 20px;
+  top: 10px;
   transform: translateX(-50%);
-
-  border-radius: 0 0 15px 15px;
+  border-radius: 10px;
   background-color: #00000050;
-  backdrop-filter: blur(4px);
-
+  backdrop-filter: blur(1px);
+  opacity: 0.6;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 100;
+
+  @media (max-width: 768px){
+    height: 5vh;
+  }
 
   /* Transição suave para subir/descer */
   transition: transform 0.4s ease;
@@ -26,7 +30,7 @@ const HeaderContainer = styled.header`
   /* Quando scrolling = false, ele volta para 0 */
   transform: ${({ scrolling }) =>
     scrolling
-      ? 'translateX(-50%) translateY(-100%)'
+      ? 'translateX(-50%) translateY(-150%)'
       : 'translateX(-50%) translateY(0)'
   };
 `
@@ -77,7 +81,7 @@ function Header() {
       <HeaderImage>
         <a href="#">
           <img
-            src="https://res.cloudinary.com/dabucfkmg/image/upload/v1734817357/logoHeader_h5hxl2.png"
+            src="https://res.cloudinary.com/dabucfkmg/image/upload/v1735248380/white_mkxq1r.png"
             alt="logo"
           />
         </a>

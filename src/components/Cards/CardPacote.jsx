@@ -134,7 +134,7 @@ const CardList = styled.div`
       &::before {
         content: '';
         display: inline-block;
-        background: url('https://res.cloudinary.com/dabucfkmg/image/upload/v1734821975/icon_vbq67u.png')
+        background: url('https://res.cloudinary.com/dabucfkmg/image/upload/v1735248623/iconColorido_bdgxgi.png')
           no-repeat center center;
         background-size: contain;
         width: 20px;

@@ -47,6 +47,7 @@ const FooterContainer = styled.footer`
 
     & > img{
         position: absolute;
+        width: 20px;
         left: 50%;
         transform: translateX(-50%);
 
@@ -59,11 +60,12 @@ const FooterContainer = styled.footer`
 `
 
 const Footer = () => {
+
     return (
         <>
             <FooterContainer>
                 <p>Todos os direitos reservados | desde 2024</p>
-                <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1734821975/icon_vbq67u.png" />
+                <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1735248623/iconColorido_bdgxgi.png" />
                 <p>
                 Desenvolvido por <a href="#"> Aleph </a>
                 </p>

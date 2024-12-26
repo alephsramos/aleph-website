@@ -216,17 +216,16 @@ const InicialDiv = styled.div`
         }
 
         & > span {
-            font-weight: 500;
-            background: linear-gradient(120deg, var(--color--purple), var(--color--white), var(--color--blue));
+            font-weight: 400;
+            background: linear-gradient(120deg, var(--color--purple), var(--color--blue));
             -webkit-background-clip: text;
             color: transparent;
             font-family: var(--font--poppins);
-            font-size: 24px;
+            font-size: 22px;
         }
 
         & > img {
-            transform: rotate(45deg);
-            width: 26px;
+            width: 18px;
         }
     }
 
@@ -328,7 +327,7 @@ const Inicial = () => {
                         <div></div>
                         <article>
                             <span>4.9</span>
-                            <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1734821975/icon_vbq67u.png" /> 
+                            <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1735248918/iconX_ybqztg.png" /> 
                         </article>
                     </InicialDiv>
                 </InicialTexts>

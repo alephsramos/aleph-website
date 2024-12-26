@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
 import Button03 from "../../components/Buttons/button03";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, FreeMode, Pagination } from "swiper/modules"; // para autoplay
@@ -8,6 +8,15 @@ import "swiper/css/pagination";
 
 import { BsArrowDown } from "react-icons/bs";
 
+const AnimacaoSetaTop = keyframes`
+    0% {
+        transform: translateY(10px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+`
 
 const PortfolioAll = styled.section`
     width: 100%;
@@ -140,6 +149,7 @@ const PortfolioSeta = styled.div`
         font-size: 32px;
         color: var(--color--purple);
         opacity: 0.4;
+        animation: ${AnimacaoSetaTop} 2s linear infinite alternate-reverse;
     }
 `
 

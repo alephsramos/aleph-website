@@ -13,6 +13,7 @@ import Pacotes from "./Pacotes";
 import Parceria from "./Parceria";
 import FAQ from "./FAQ";
 import Formulario from "./Formulario";
+import WhatsAppButton from "../../components/WhatsApp/WhatsApp";
 
 const Home = () => {
     return (
@@ -31,8 +32,9 @@ const Home = () => {
                                             <Parceria />
                                             <FaixaClara />
                                                 <FAQ />
-                                                <FaixaEscura />
                                                     <Formulario /> 
+
+            <WhatsAppButton />
         </>
     )
 }

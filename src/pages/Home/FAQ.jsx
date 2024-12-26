@@ -30,7 +30,7 @@ const FaqBackground = styled.div`
     top: 0;
     left: 0;
     opacity: 0.3;
-    border-image: fill 0 linear-gradient(#000, #0000);
+    border-image: fill 0 linear-gradient(0deg, #000, #0000);
   }
 `;
 
@@ -59,7 +59,7 @@ const FaqContainer = styled.section`
             top: 0;
             left: 0;
             opacity: 0.3;
-            border-image: fill 0 linear-gradient(#000, #0000);
+            border-image: fill 0 linear-gradient(0deg, #000, #0000);
         }
     }
 `;

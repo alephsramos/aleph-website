@@ -35,7 +35,7 @@ const FormContainer = styled.section`
   position: relative;
   height: auto;
   z-index: 2;
-  padding: 5%;
+  padding: 0% 5% 5% 5%;
 
   @media (max-width: 768px){
     background: #000;
@@ -97,11 +97,11 @@ const FormTexts = styled.div`
     }
 
     & > img {
-        width: 50px;
+        width: 150px;
         object-fit: contain;
 
         @media (max-width: 768px){
-            width: 30px;
+            width: 120px;
         }
     }
 
@@ -229,10 +229,11 @@ const FormImage = styled.div`
 
     @media (max-width: 768px){
         position: absolute;
-        left: -70%;
+        left: -60%;
+        top: -10%;
         width: 150%;
         z-index: -1;
-        opacity: 0.05;
+        opacity: 0.1;
     }
 
     & > img {
@@ -249,7 +250,7 @@ const Formulario = () => {
 
                 <FormSection>
                     <FormTexts>
-                        <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1734821975/icon_vbq67u.png" />
+                        <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1735248380/white_mkxq1r.png" />
                         <h1>Entre em <b>contato</b> conosco</h1>
                         <p>Ao preencher o formulário, você está de acordo com os nossos termos de serviço, e politica de dados</p>
 

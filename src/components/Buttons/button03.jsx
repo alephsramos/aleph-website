@@ -19,7 +19,7 @@ const Button = styled.button`
     & > b{
         color: var(--color--white);
         font-family: var(--font--poppins);
-        font-weight: 400;
+        font-weight: 600;
         font-size: 16px;
 
         @media (max-width: 768px) {
@@ -28,7 +28,7 @@ const Button = styled.button`
     }
 
     & > img {
-        width: 25px;
+        width: 20px;
     }
     
 ` 
@@ -36,9 +36,9 @@ const Button = styled.button`
 const Button03 = () => {
     return (
         <>
-            <Button>
+            <Button id="click-button">
                 <b>Solicitar orçamento</b>
-                <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1734953001/iconWhite_stkg7v.png"  />
+                <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1735248625/iconWhite_muzw7l.png"  />
             </Button>
         </>
     )

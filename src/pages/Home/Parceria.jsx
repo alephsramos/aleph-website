@@ -87,7 +87,7 @@ const ParceriaTitle = styled.div`
     }
 
     & > img {
-        width: 150px;
+        width: 180px;
         object-fit: contain;
 
         @media (max-width: 768px){
@@ -162,7 +162,7 @@ const Parceria = () => {
 
                         <h1>Torne-se nosso parceiro</h1>
                         <p>Se você está buscando criar mais de 1 site, oferecemos uma proposta para você, se tornando nosso parceiro, você garante preços exclusivos</p>
-                        <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1734817357/logoHeader_h5hxl2.png" />
+                        <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1735248919/whitePacerias_x9oj45.png" />
 
                     </ParceriaTitle>
 

@@ -82,7 +82,7 @@ const CardDepoimento = ({ logo, nota, empresa, depoimento}) => {
                 <CardTopo>
                     <img src={logo}/>
                     <div>
-                        <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1734821975/icon_vbq67u.png" />
+                        <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1735248623/iconColorido_bdgxgi.png" />
                         <p>{nota}</p> 
                     </div>
                 </CardTopo>

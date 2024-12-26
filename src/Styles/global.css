@@ -18,11 +18,10 @@
 }
 
 ::-webkit-scrollbar {
-    width: 5px;
+    width: 3px;
     background-color: transparent;
 }
 
 ::-webkit-scrollbar-thumb{
-    background: linear-gradient(var(--color--purple), #353535, var(--color--blue));
-    border-radius: 20px;
+    background: var(--color--black);
 }

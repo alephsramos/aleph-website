@@ -10,9 +10,15 @@ const Button = styled.button`
     border-radius: 15px;
     border: none;
     cursor: pointer;
+    background-color: var(--color--white);
 
     @media (max-width: 768px) {
         border-radius: 10px;
+    }
+
+    & > img {
+        width: 20px;
+        object-fit: contain;
     }
 
     & > b{
@@ -33,9 +39,9 @@ const Button = styled.button`
 const Button01 = () => {
     return (
         <>
-            <Button>
+            <Button id="click-button">
                 <b>Solicitar orçamento</b>
-                <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1734821975/icon_vbq67u.png"  />
+                <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1735248623/iconColorido_bdgxgi.png"  />
             </Button>
         </>
     )

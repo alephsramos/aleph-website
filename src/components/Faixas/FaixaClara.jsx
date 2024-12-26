@@ -89,35 +89,35 @@ const FaixaClara = () => {
         <SwiperSlide>
           <div>
             <h3>Faça seu site conosco</h3>
-            <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1734953001/iconWhite_stkg7v.png" alt="icon" />
+            <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1735248625/iconWhite_muzw7l.png" alt="icon" />
           </div>
         </SwiperSlide>
 
         <SwiperSlide>
           <div>
             <h3>Faça seu site conosco</h3>
-            <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1734953001/iconWhite_stkg7v.png" alt="icon" />
+            <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1735248625/iconWhite_muzw7l.png" alt="icon" />
           </div>
         </SwiperSlide>
 
         <SwiperSlide>
           <div>
             <h3>Faça seu site conosco</h3>
-            <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1734953001/iconWhite_stkg7v.png" alt="icon" />
+            <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1735248625/iconWhite_muzw7l.png" alt="icon" />
           </div>
         </SwiperSlide>
 
         <SwiperSlide>
           <div>
             <h3>Faça seu site conosco</h3>
-            <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1734953001/iconWhite_stkg7v.png" alt="icon" />
+            <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1735248625/iconWhite_muzw7l.png" alt="icon" />
           </div>
         </SwiperSlide>
 
         <SwiperSlide>
           <div>
             <h3>Faça seu site conosco</h3>
-            <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1734953001/iconWhite_stkg7v.png" alt="icon" />
+            <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1735248625/iconWhite_muzw7l.png" alt="icon" />
           </div>
         </SwiperSlide>
       </Swiper>
