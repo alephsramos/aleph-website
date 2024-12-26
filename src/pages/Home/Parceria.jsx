@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import Button02 from "../../components/Buttons/button02";
 import Button03 from "../../components/Buttons/button03";
+
+import { BsCash, BsShieldLock, BsAward, BsBuildings } from "react-icons/bs";
 
 const ParceriaContainer = styled.section `
     width: 100%;
@@ -49,7 +50,7 @@ const ParceriaTitle = styled.div`
     @media (max-width: 768px){
         width: 100%;
         align-items: center;
-        padding: 50px 30px;
+        padding: 40px 30px 20px 30px;
         text-align: center;
         gap: 50px;
     }
@@ -64,7 +65,7 @@ const ParceriaTitle = styled.div`
 
         @media (max-width: 768px){
             line-height: 100%;
-            font-size: 32px;
+            font-size: 28px;
         }
     }
 
@@ -83,7 +84,7 @@ const ParceriaTitle = styled.div`
     }
 
     & > img {
-        width: 200px;
+        width: 150px;
         object-fit: contain;
 
         @media (max-width: 768px){
@@ -103,11 +104,19 @@ const ParceriaLista = styled.div`
     flex-direction: column;
     gap: 30px;
     margin: 20px;
+    border: 3px solid var(--color--purple);
+
+    & > button {
+        @media (max-width: 768px){
+            width: 100%;
+        }
+    }
 
     @media (max-width: 768px){
         width: 95%;
         margin-bottom: 10px;
         border-radius: 20px;
+        align-items: flex-start;
     }
 
     & > ol {
@@ -122,24 +131,18 @@ const ParceriaLista = styled.div`
 
     & > li {
       position: relative;
-      padding-left: 35px;
       font-family: var(--font--poppins);
       font-size: 16px;
       color: var(--color--black);
       font-weight: 300;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
 
-      &::before {
-        content: '';
-        display: inline-block;
-        background: url('https://res.cloudinary.com/dabucfkmg/image/upload/v1734821975/icon_vbq67u.png')
-          no-repeat center center;
-        background-size: contain;
-        width: 24px;
-        height: 24px;
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
+      & > svg {
+        font-size: 26px!important;
+        color: var(--color--purple);
       }
     }
   }
@@ -162,10 +165,22 @@ const Parceria = () => {
 
                     <ParceriaLista>
                         <ol>
-                            <li>Descontos exclusivo em qualquer tipo de site</li>
-                            <li>Descontos exclusivo em qualquer tipo de site</li>
-                            <li>Descontos exclusivo em qualquer tipo de site</li>
-                            <li>Descontos exclusivo em qualquer tipo de site</li>
+                            <li>
+                                <BsCash />
+                                Descontos exclusivos
+                            </li>
+                            <li>
+                                <BsShieldLock  />
+                                Manutenção estendida
+                            </li>
+                            <li>
+                                <BsAward />
+                                Prioridade de entrega
+                            </li>
+                            <li>
+                                <BsBuildings />
+                                Feito para empresas
+                            </li>
                         </ol>
 
                         <Button03 />
