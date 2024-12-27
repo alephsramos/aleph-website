@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled, {keyframes} from "styled-components";
 import Button01 from "../../components/Buttons/button01";
 import Button02 from "../../components/Buttons/button02";
+
+import AOS from "aos";
+import "aos/dist/aos.css"; 
 
 const zoomAnimation = keyframes`
   0% {
@@ -321,31 +324,42 @@ const InicialDiv = styled.div`
 `
 
 const Inicial = () => {
+
+    useEffect(() => {
+        AOS.init({
+            duration: 1500, // Duração em milissegundos
+            offset: 20,     // Distância do scroll para ativar a animação
+            easing: "ease-in-out", // Tipo de animação
+            once: true,     // Se a animação ocorre apenas uma vez
+        });
+    }, []);
+    
+
     return (
         <>
             <BackgroundHome></BackgroundHome>
             <InicialContainer>
                 <InicialTexts>
-                    <h1>Já imaginou ter um <b>site de altíssimo</b> padrão?</h1>
-                    <p>Um site de altíssimo padrão é muito mais do que uma página na internet: é uma experiência online única, que combina layout refinado, tecnologia de ponta.</p>
-                    <div>
-                        <Button01 />
+                    <h1 data-aos="fade-up-right" data-aos-delay="100">Já imaginou ter um <b>site de altíssimo</b> padrão?</h1>
+                    <p data-aos="fade-up" data-aos-delay="200">Um site de altíssimo padrão é muito mais do que uma página na internet: é uma experiência online única, que combina layout refinado, tecnologia de ponta.</p>
+                    <div data-aos="fade-up" data-aos-delay="300">
+                        <Button01/>
                         <Button02 /> 
                     </div>
-                    <span>Todas as informações coletadas nesse site serão para fins de contato, seus dados estão protegidos.</span>
-                    <InicialDiv>
+                    <span data-aos="fade-in" data-aos-delay="1000">Todas as informações coletadas nesse site serão para fins de contato, seus dados estão protegidos.</span>
+                    <InicialDiv data-aos="fade-in" data-aos-delay="500">
                         <div></div>
                         <div></div>
                         <div></div>
                         <div></div>
                         <article>
-                            <span>4.9</span>
-                            <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1735248918/iconX_ybqztg.png" /> 
+                            <span data-aos="fade-in" data-aos-delay="1000">4.9</span>
+                            <img data-aos="fade-in" data-aos-delay="1000" src="https://res.cloudinary.com/dabucfkmg/image/upload/v1735248918/iconX_ybqztg.png" /> 
                         </article>
                     </InicialDiv>
                 </InicialTexts>
                 <InicialImage>
-                    <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1734822642/mockupSite2_1_ggycxy.png" />
+                    <img data-aos="fade-up-right" data-aos-duration="2000" data-aos-delay="0" src="https://res.cloudinary.com/dabucfkmg/image/upload/v1734822642/mockupSite2_1_ggycxy.png" />
                 </InicialImage>
             </InicialContainer>
         </>
