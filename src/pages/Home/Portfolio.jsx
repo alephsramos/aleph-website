@@ -112,6 +112,8 @@ const PortfolioCarrossel = styled.div`
     gap: 30px;
     width: 100%;
     position: relative;
+    margin-top: -50px;
+    margin-bottom: -50px;
 
     &::before {
         content: '';
@@ -187,7 +189,7 @@ const Portfolio = () => {
                         spaceBetween: 10, // Menor espaço entre os slides no mobile
                     },
                     1080: {
-                        slidesPerView: 4, // Exibe 1 slide por vez no mobile
+                        slidesPerView: 3, // Exibe 1 slide por vez no mobile
                         spaceBetween: 10, // Menor espaço entre os slides no mobile
                         },
                     }}
@@ -196,8 +198,8 @@ const Portfolio = () => {
                     <SwiperSlide>
                     <a href="#">
                         <img
-                        src="https://res.cloudinary.com/dabucfkmg/image/upload/v1734955151/mockupDesktop_pxgaar.png"
-                        alt="mockup"
+                        src="https://res.cloudinary.com/dabucfkmg/image/upload/v1735264979/10_gyjqvc.png"
+                        alt="le ange"
                         />
                     </a>
                     </SwiperSlide>
@@ -205,8 +207,8 @@ const Portfolio = () => {
                     <SwiperSlide>
                     <a href="#">
                         <img
-                        src="https://res.cloudinary.com/dabucfkmg/image/upload/v1734955151/mockupDesktop_pxgaar.png"
-                        alt="mockup"
+                        src="https://res.cloudinary.com/dabucfkmg/image/upload/v1735264979/18_zyjvhk.png"
+                        alt="allox"
                         />
                     </a>
                     </SwiperSlide>
@@ -214,8 +216,8 @@ const Portfolio = () => {
                     <SwiperSlide>
                     <a href="#">
                         <img
-                        src="https://res.cloudinary.com/dabucfkmg/image/upload/v1734955151/mockupDesktop_pxgaar.png"
-                        alt="mockup"
+                        src="https://res.cloudinary.com/dabucfkmg/image/upload/v1735264979/19_f8pi7x.png"
+                        alt="your name"
                         />
                     </a>
                     </SwiperSlide>
@@ -223,8 +225,8 @@ const Portfolio = () => {
                     <SwiperSlide>
                     <a href="#">
                         <img
-                        src="https://res.cloudinary.com/dabucfkmg/image/upload/v1734955151/mockupDesktop_pxgaar.png"
-                        alt="mockup"
+                        src="https://res.cloudinary.com/dabucfkmg/image/upload/v1735264979/13_cnu2os.png"
+                        alt="thelastofus"
                         />
                     </a>
                     </SwiperSlide>
@@ -232,8 +234,8 @@ const Portfolio = () => {
                     <SwiperSlide>
                     <a href="#">
                         <img
-                        src="https://res.cloudinary.com/dabucfkmg/image/upload/v1734955151/mockupDesktop_pxgaar.png"
-                        alt="mockup"
+                        src="https://res.cloudinary.com/dabucfkmg/image/upload/v1735264979/12_nkzjqe.png"
+                        alt="lifegreen"
                         />
                     </a>
                     </SwiperSlide>
@@ -241,8 +243,53 @@ const Portfolio = () => {
                     <SwiperSlide>
                     <a href="#">
                         <img
-                        src="https://res.cloudinary.com/dabucfkmg/image/upload/v1734955151/mockupDesktop_pxgaar.png"
-                        alt="mockup"
+                        src="https://res.cloudinary.com/dabucfkmg/image/upload/v1735264980/15_wehzuc.png"
+                        alt="monkey"
+                        />
+                    </a>
+                    </SwiperSlide>
+
+                    <SwiperSlide>
+                    <a href="#">
+                        <img
+                        src="https://res.cloudinary.com/dabucfkmg/image/upload/v1735264979/11_yvl8cq.png"
+                        alt="etech"
+                        />
+                    </a>
+                    </SwiperSlide>
+
+                    <SwiperSlide>
+                    <a href="#">
+                        <img
+                        src="https://res.cloudinary.com/dabucfkmg/image/upload/v1735264980/16_xklqek.png"
+                        alt="wizardZ"
+                        />
+                    </a>
+                    </SwiperSlide>
+
+                    <SwiperSlide>
+                    <a href="#">
+                        <img
+                        src="https://res.cloudinary.com/dabucfkmg/image/upload/v1735264980/14_vunelf.png"
+                        alt="coffe"
+                        />
+                    </a>
+                    </SwiperSlide>
+
+                    <SwiperSlide>
+                    <a href="#">
+                        <img
+                        src="https://res.cloudinary.com/dabucfkmg/image/upload/v1735264980/17_pgciit.png"
+                        alt="horizen"
+                        />
+                    </a>
+                    </SwiperSlide>
+
+                    <SwiperSlide>
+                    <a href="#">
+                        <img
+                        src="https://res.cloudinary.com/dabucfkmg/image/upload/v1735264980/20_hfglfp.png"
+                        alt="yellow"
                         />
                     </a>
                     </SwiperSlide>

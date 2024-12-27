@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+import WhatsAppButton from "../WhatsApp/WhatsApp";
+
 const FooterContainer = styled.footer`
     position: absolute;
     left: 50%;
@@ -69,8 +71,9 @@ const Footer = () => {
                 <p>
                 Desenvolvido por <a href="#"> Aleph </a>
                 </p>
+
             </FooterContainer>
-        
+
         </>
     )
 }

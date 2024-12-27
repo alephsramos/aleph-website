@@ -49,13 +49,14 @@ const Popup = styled.div`
   right: 50px;
   width: 300px;
   padding: 10px 20px 20px 20px ;
-  background-color: #fbfbfb;
-  border-radius: 25px 25px 0 25px;
+  background-color: #35353520;
+  backdrop-filter: blur(5px);
+  border-radius: 15px 15px 0 15px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
   animation: ${popupAnimation} 0.5s ease-in-out;
   display: flex;
   flex-direction: column;
-  font-family: var(--font--comfortaa);
+  font-family: var(--font--poppins);
 `;
 
 const CloseButton = styled.button`
@@ -67,7 +68,7 @@ const CloseButton = styled.button`
   border: none;
   font-size: 18px;
   cursor: pointer;
-  color: #b10000;
+  color: var(--color--purple);
   padding: 5px 5px;
   display: flex;
   align-items: center;
@@ -83,14 +84,14 @@ const CloseButton = styled.button`
 `;
 
 const MessagesContainer = styled.div`
-  background-image: url('https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/d8641711-b18b-4d15-33a0-110225c0cc00/public');
-  border-radius: 20px;
+background-color: var(--color--white);
+  border-radius: 10px;
   padding: 10px;
   max-height: 300px;
   overflow-y: auto;
   margin-bottom: 10px;
   margin-top: 20px;
-  font-family: var(--font--comfortaa)!important;
+  font-family: var(--font--poppins)!important;
 `;
 
 const MessageRow = styled.div`
@@ -100,12 +101,12 @@ const MessageRow = styled.div`
   margin-bottom: 10px;
   font-weight: 200;
   font-size: 14px;
-  font-family: var(--font--comfortaa)!important;
+  font-family: var(--font--poppins)!important;
 `;
 
 const ProfilePicture = styled.img`
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   margin-right: ${(props) => (props.sent ? "0" : "8px")};
   margin-left: ${(props) => (props.sent ? "8px" : "0")};
@@ -118,18 +119,20 @@ const MessageBox = styled.div`
   border-radius: 10px;
   padding: 8px;
   max-width: 70%;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
   white-space: pre-wrap; // Adicione esta linha
-  font-family: var(--font--comfortaa)!important;
+  font-family: var(--font--poppins)!important;
   font-size: 12px;
 `;
 
 const BotName = styled.div`
   font-size: 10px;
-  color: #b6b6b6;
-  font-weight: 200;
+  background: linear-gradient(90deg, var(--color--purple), #dbdbdb, var(--color--blue));
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 400;
   margin-bottom: 5px;
-  font-family: var(--font--comfortaa)!important;
+  font-family: var(--font--poppins)!important;
 `;
 
 const TypingDots = styled.div`
@@ -137,7 +140,7 @@ const TypingDots = styled.div`
   font-size: 14px;
   font-style: italic;
   color: #b6b6b6;
-  font-family: var(--font--comfortaa)!important;
+  font-family: var(--font--poppins)!important;
 
   &::after {
     content: "";
@@ -163,36 +166,36 @@ const TypingDots = styled.div`
 const InputContainer = styled.div`
   display: flex;
   gap: 10px;
-  font-family: var(--font--comfortaa)!important;
+  font-family: var(--font--poppins)!important;
 `;
 
 const Input = styled.input`
   flex: 1;
   padding: 8px;
   border: 1px solid #ddd;
-  border-radius: 15px;
+  border-radius: 10px;
   font-size: 12px;
-  font-family: var(--font--comfortaa)!important;
+  font-family: var(--font--poppins)!important;
+  background: #ffffff05;
+  backdrop-filter: blur(1px);
+  color: var(--color--white);
 
   &::placeholder{
-    font-size: 12px!important;
-    font-weight: 200!important;
+    font-size: 10px!important;
+    font-weight: 400!important;
+    padding-left: 5px;
   }
 `;
 
 const SendButton = styled.button`
-  padding: 8px 15px;
-  background-color: #00d757;
+  padding: 8px 20px;
+  background: linear-gradient(90deg, var(--color--purple), var(--color--blue));
   color: white;
   border: none;
-  border-radius: 15px;
+  border-radius: 10px;
   cursor: pointer;
-  font-family: var(--font--comfortaa)!important;
-  font-weight: 300;
-
-  &:hover {
-    background-color: #00b94a;
-  }
+  font-family: var(--font--poppins)!important;
+  font-weight: 400;
 `;
 
 const WhatsAppButton = ({ footerRendered }) => {
@@ -205,19 +208,25 @@ const WhatsAppButton = ({ footerRendered }) => {
   const [finalStage, setFinalStage] = useState(false); 
 
   const whatsappLink = "https://wa.link/dojlwi"; 
-  const botProfilePic = "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/8c41f0fe-aedf-44cf-d36f-47c09d855d00/public";
+  const botProfilePic = "https://res.cloudinary.com/dabucfkmg/image/upload/v1735248623/iconColorido_bdgxgi.png";
   const webhookURL = "SEU_WEBHOOK_URL";
 
   useEffect(() => {
-    if (footerRendered) {
-      const timer = setTimeout(() => {
-        setShowPopup(true);
-        setMessages([{ id: 1, text: "Olá! Percebemos que você estava navegando pelo site. 🐶🐾\n\nComo podemos te ajudar? 🤗", sent: false }]);
-      }, 2000);
-
-      return () => clearTimeout(timer);
-    }
-  }, [footerRendered]);
+    const timer = setTimeout(() => {
+      setShowPopup(true);
+      setMessages([
+        {
+          id: 1,
+          text: "Olá! Percebemos que você estava navegando pelo site. 🐶🐾\n\nComo podemos te ajudar? 🤗",
+          sent: false,
+        },
+      ]);
+    }, 45000); // 30 segundos (30000 ms)
+  
+    // cleanup
+    return () => clearTimeout(timer);
+  }, []); // <-- sem dependências
+  
 
   const handleSend = async () => {
     if (message.trim() === "") return;
@@ -305,7 +314,7 @@ const WhatsAppButton = ({ footerRendered }) => {
               <MessageRow key={msg.id} sent={msg.sent}>
                 {!msg.sent && <ProfilePicture src={botProfilePic} alt="Bot" />}
                 <MessageBox sent={msg.sent}>
-                  {!msg.sent && <BotName>Pousada Le Ange</BotName>}
+                  {!msg.sent && <BotName>aleph</BotName>}
                   <div>{msg.text}</div>
                 </MessageBox>
               </MessageRow>

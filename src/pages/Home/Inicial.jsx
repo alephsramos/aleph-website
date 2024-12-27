@@ -1,7 +1,19 @@
 import React from "react";
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
 import Button01 from "../../components/Buttons/button01";
 import Button02 from "../../components/Buttons/button02";
+
+const zoomAnimation = keyframes`
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+`;
 
 const BackgroundHome = styled.div`
     width: 100%;
@@ -152,6 +164,7 @@ const InicialTexts = styled.div`
         opacity: .3;
         color: var(--color--white);
         margin-top: -15px;
+        
 
         @media (max-width: 768px) {
             text-align: center;
