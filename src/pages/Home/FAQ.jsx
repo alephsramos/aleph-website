@@ -145,17 +145,43 @@ const FAQ = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     
     const textItems = [
-        { title: "Comunicação facilitada", text: "Aqui você resolve tudo diretamente com o desenvolvedor, o que você precisar e quando precisar, trazendo mais eficiência e clareza em suas necessidades" },
-        { title: "Manutenção gratuita", text: "Garantimos suporte gratuito por 12 meses." },
-        { title: "Aprenda a mexer no seu site", text: "Receba treinamentos para gerenciar o seu site." },
-        { title: "Descontos em outros serviços", text: "Aproveite descontos exclusivos." },
+        { 
+            title: "Qual a vantagem de eu ter um site?", 
+            text: "Ter um site profissional aumenta sua visibilidade, fortalece a sua marca e permite atender seus clientes de forma eficiente, 24 horas por dia." 
+        },
+        { 
+            title: "Como faço um site para vender?", 
+            text: "Crio sites otimizados para vendas, com integração a meios de pagamento, carrinho de compras e estratégias para aumentar sua conversão." 
+        },
+        { 
+            title: "Posso colocar quantas seções no meu site?", 
+            text: "Sim! Seu site será personalizado, com quantas seções forem necessárias para atender às suas necessidades e objetivos." 
+        },
+        { 
+            title: "Qual tipo de linguagem você usa?", 
+            text: "Uso tecnologias modernas como React, HTML5, CSS3, JavaScript e frameworks que garantem um site rápido e funcional." 
+        },
+        
     ];
 
     const textItems2 = [
-        { title: "2Comunicação facilitada", text: "Aqui você resolve tudo diretamente com o desenvolvedor, o que você precisar e quando precisar, trazendo mais eficiência e clareza em suas necessidades" },
-        { title: "2Manutenção gratuita", text: "Garantimos suporte gratuito por 12 meses." },
-        { title: "2Aprenda a mexer no seu site", text: "Receba treinamentos para gerenciar o seu site." },
-        { title: "2Descontos em outros serviços", text: "Aproveite descontos exclusivos." },
+        { 
+            title: "O valor mínimo para um site é quanto?", 
+            text: "O valor inicial depende da complexidade do projeto, mas ofereço opções acessíveis para atender diferentes necessidades." 
+        },
+        { 
+            title: "Existe garantia na entrega do site?", 
+            text: "Sim! A entrega é garantida dentro do prazo combinado, com suporte técnico incluso por 3 meses para ajustes e manutenção." 
+        },
+        { 
+            title: "Quais são os meios de contato?", 
+            text: "Você pode entrar em contato via WhatsApp, e-mail ou diretamente pelas redes sociais. Estou sempre disponível para atender você!" 
+        },
+        { 
+            title: "A hospedagem do site está inclusa?", 
+            text: "A hospedagem pode ser inclusa como um serviço adicional, garantindo um pacote completo e funcional." 
+        },
+        
     ];
 
     const handleTextClick = (index) => {
