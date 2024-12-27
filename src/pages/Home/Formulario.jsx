@@ -203,6 +203,7 @@ const FormTexts = styled.div`
             @media (max-width: 768px){
                 margin-top: 5px;
                 width: 100%;
+                font-size: 16px;
             }
         }
 

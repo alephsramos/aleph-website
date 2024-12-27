@@ -33,7 +33,7 @@ const Button = styled.button`
 const Button02 = () => {
     return (
         <>
-            <Button id="click-button">
+            <Button id="click-button" data-aos="fade-up" data-aos-delay="200">
                 <b>Saber mais</b>
             </Button>
         </>

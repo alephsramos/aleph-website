@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { BsArrowRight } from "react-icons/bs";
 import CardVantagens from "../../components/Cards/CardVantagens";
@@ -7,6 +7,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination"; // Estilos da paginação
 import { Autoplay, FreeMode, Pagination } from "swiper/modules"; 
+
+import AOS from "aos";
+import "aos/dist/aos.css"; 
 
 const VantagensBackground = styled.div`
   width: 100%;
@@ -169,6 +172,33 @@ const StyledSwiperSlide = styled(SwiperSlide)`
 `;
 
 const Vantagens = () => {
+
+   useEffect(() => {
+        const updateAOS = () => {
+            const duration = window.innerWidth > 800 ? 1500 : 800; // Define a duração com base na largura da tela
+
+            AOS.init({
+                duration: duration, // Define a duração dinamicamente
+                offset: 20,         // Distância do scroll para ativar a animação
+                easing: "ease-in-out", // Tipo de animação
+                once: true,         // Se a animação ocorre apenas uma vez
+            });
+
+            AOS.refresh(); // Atualiza as animações ao mudar as configurações
+        };
+
+        // Adiciona um evento para atualizar a configuração ao redimensionar a janela
+        window.addEventListener("resize", updateAOS);
+
+        // Chama a função na montagem do componente
+        updateAOS();
+
+        // Remove o evento ao desmontar o componente
+        return () => {
+            window.removeEventListener("resize", updateAOS);
+        };
+    }, []);
+
   return (
     <>
       <VantagensContainer>
@@ -176,15 +206,15 @@ const Vantagens = () => {
 
         <VantagensSection>
           <VantagensTitle>
-            <h1>
+            <h1 data-aos="fade-up-right" data-aos-delay="100">
               <b>Vantagens</b> em ter um site conosco
             </h1>
             <a href="#">
-              <BsArrowRight />
+              <BsArrowRight data-aos="fade-in" data-aos-delay="400" />
             </a>
           </VantagensTitle>
 
-          <VantagensCarrossel>
+          <VantagensCarrossel data-aos="fade-up-right" data-aos-delay="400">
             <Swiper
                loop={true} // Loop infinito
                autoplay={{
@@ -211,12 +241,12 @@ const Vantagens = () => {
               <StyledSwiperSlide>
                 <div>
                   <CardVantagens
-                    title="Velocidade de entrega"
-                    description="O tempo mais acessível para você ter seu projeto em mãos o mais rápido possível, porém dependendo do seu projeto, consulte mais em pacotes."
+                    title="Velocidade"
+                    description=" Seus projetos são desenvolvidos com agilidade, garantindo a entrega rápida de sites funcionais e modernos, sem comprometer a qualidade. Ideal para quem precisa de resultados prontos no menor tempo possível."
                   />
                   <CardVantagensSmall
-                    title="Velocidade de entrega"
-                    description="O tempo mais acessível para você ter seu projeto em mãos o mais rápido possível."
+                    title="Qualidade"
+                    description="Cada site criado reflete atenção aos detalhes, com design profissional e performance impecável."
                   />
                 </div>
               </StyledSwiperSlide>
@@ -224,12 +254,12 @@ const Vantagens = () => {
               <StyledSwiperSlide>
                 <div>
                   <CardVantagensSmall
-                    title="Velocidade de entrega"
-                    description="O tempo mais acessível para você ter seu projeto em mãos o mais rápido possível."
+                    title="Otimização"
+                    description=" Seus sites são otimizados, garantindo carregamento rápido, navegação fluida e compatibilidade com todos os dispositivos"
                   />
                   <CardVantagens
-                    title="Velocidade de entrega"
-                    description="O tempo mais acessível para você ter seu projeto em mãos o mais rápido possível, porém dependendo do seu projeto, consulte mais em pacotes."
+                    title="SEO"
+                    description="Seus sites já são construídos com estratégias de SEO integradas, aumentando a visibilidade nos motores de busca e atraindo tráfego qualificado. Você não entrega só um site bonito, mas também eficaz."
                   />
                 </div>
               </StyledSwiperSlide>
@@ -237,12 +267,12 @@ const Vantagens = () => {
               <StyledSwiperSlide>
                 <div>
                   <CardVantagens
-                    title="Velocidade de entrega"
-                    description="O tempo mais acessível para você ter seu projeto em mãos o mais rápido possível, porém dependendo do seu projeto, consulte mais em pacotes."
+                    title="Autenticidade"
+                    description="Você cria sites únicos e personalizados, refletindo a identidade de cada cliente e diferenciando-se de modelos genéricos. Cada projeto é exclusivo, pensado para destacar o cliente no mercado."
                   />
                   <CardVantagensSmall
-                    title="Velocidade de entrega"
-                    description="O tempo mais acessível para você ter seu projeto em mãos o mais rápido possível."
+                    title="Versatilidade"
+                    description="Com a capacidade de atender diferentes nichos e demandas, seu site se adapta ao que deseja."
                   />
                 </div>
               </StyledSwiperSlide>
@@ -250,12 +280,12 @@ const Vantagens = () => {
               <StyledSwiperSlide>
                 <div>
                   <CardVantagensSmall
-                    title="Velocidade de entrega"
-                    description="O tempo mais acessível para você ter seu projeto em mãos o mais rápido possível."
+                    title="Comunicação"
+                    description="Você mantém uma comunicação clara e aberta durante todo o processo, garantindo que você esteja sempre informado e satisfeito com tudo."
                   />
                   <CardVantagens
-                    title="Velocidade de entrega"
-                    description="O tempo mais acessível para você ter seu projeto em mãos o mais rápido possível, porém dependendo do seu projeto, consulte mais em pacotes."
+                    title="Completo"
+                    description="Solução completa, que vai além do design: desde registro de domínio e hospedagem até estratégias para redes sociais e integrações com ferramentas de marketing."
                   />
                 </div>
               </StyledSwiperSlide>
@@ -263,13 +293,27 @@ const Vantagens = () => {
               <StyledSwiperSlide>
                 <div>
                     <CardVantagens
-                    title="Velocidade de entrega"
-                    description="O tempo mais acessível para você ter seu projeto em mãos o mais rápido possível, porém dependendo do seu projeto, consulte mais em pacotes."
+                    title="Manutenção"
+                    description="Seus sites são desenvolvidos de forma que possam ser facilmente atualizados e mantidos, com suporte contínuo para garantir que tudo esteja sempre funcionando perfeitamente."
                   />
                   <CardVantagensSmall
-                    title="Velocidade de entrega"
-                    description="O tempo mais acessível para você ter seu projeto em mãos o mais rápido possível."
+                    title="Escalabilidade"
+                    description="Seus sites prontos para crescer junto com o seu negócio, permitindo a adição de novas funcionalidades e se adaptando às demandas futuras do mercado."
                   />
+                </div>
+              </StyledSwiperSlide>
+
+              <StyledSwiperSlide>
+                <div>
+                  <CardVantagensSmall
+                    title="Desempenho"
+                    description="Seus sites são projetados para desempenho máximo, com alta velocidade de carregamento."
+                  />
+                  <CardVantagens
+                    title="Vendas"
+                    description="Seus sites não são apenas vitrines, mas ferramentas estratégicas para aumentar as conversões e vendas, com design persuasivo, CTAs bem posicionados e integração com plataformas de pagamento."
+                  />
+                  
                 </div>
               </StyledSwiperSlide>
 

@@ -326,12 +326,29 @@ const InicialDiv = styled.div`
 const Inicial = () => {
 
     useEffect(() => {
-        AOS.init({
-            duration: 1500, // Duração em milissegundos
-            offset: 20,     // Distância do scroll para ativar a animação
-            easing: "ease-in-out", // Tipo de animação
-            once: true,     // Se a animação ocorre apenas uma vez
-        });
+        const updateAOS = () => {
+            const duration = window.innerWidth > 800 ? 1500 : 800; // Define a duração com base na largura da tela
+
+            AOS.init({
+                duration: duration, // Define a duração dinamicamente
+                offset: 20,         // Distância do scroll para ativar a animação
+                easing: "ease-in-out", // Tipo de animação
+                once: true,         // Se a animação ocorre apenas uma vez
+            });
+
+            AOS.refresh(); // Atualiza as animações ao mudar as configurações
+        };
+
+        // Adiciona um evento para atualizar a configuração ao redimensionar a janela
+        window.addEventListener("resize", updateAOS);
+
+        // Chama a função na montagem do componente
+        updateAOS();
+
+        // Remove o evento ao desmontar o componente
+        return () => {
+            window.removeEventListener("resize", updateAOS);
+        };
     }, []);
     
 
@@ -359,7 +376,7 @@ const Inicial = () => {
                     </InicialDiv>
                 </InicialTexts>
                 <InicialImage>
-                    <img data-aos="fade-up-right" data-aos-duration="2000" data-aos-delay="0" src="https://res.cloudinary.com/dabucfkmg/image/upload/v1734822642/mockupSite2_1_ggycxy.png" />
+                    <img data-aos="fade-up-right" data-aos-delay="0" src="https://res.cloudinary.com/dabucfkmg/image/upload/v1734822642/mockupSite2_1_ggycxy.png" />
                 </InicialImage>
             </InicialContainer>
         </>

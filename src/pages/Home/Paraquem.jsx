@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import CardParaquem from "../../components/Cards/CardParaquem";
 
-import { BsBag } from "react-icons/bs";
+import { BsBag, BsGem, BsPeople, BsSuitcaseLg } from "react-icons/bs";
+
+import AOS from "aos";
+import "aos/dist/aos.css"; 
 
 
 const ParaquemAll = styled.section `
@@ -15,6 +18,7 @@ const ParaquemAll = styled.section `
     justify-content: center;
     flex-direction: column;
     gap: 50px;
+    overflow-x: hidden;
 
     @media (max-width: 768px) {
         padding: 0 2.5% 10% 2.5%;
@@ -115,31 +119,59 @@ const ParaquemCard2 = styled.div`
 `
 
 const Paraquem = () => {
+
+    useEffect(() => {
+        const updateAOS = () => {
+            const duration = window.innerWidth > 800 ? 1500 : 800; // Define a duração com base na largura da tela
+
+            AOS.init({
+                duration: duration, // Define a duração dinamicamente
+                offset: 20,         // Distância do scroll para ativar a animação
+                easing: "ease-in-out", // Tipo de animação
+                once: true,         // Se a animação ocorre apenas uma vez
+            });
+
+            AOS.refresh(); // Atualiza as animações ao mudar as configurações
+        };
+
+        // Adiciona um evento para atualizar a configuração ao redimensionar a janela
+        window.addEventListener("resize", updateAOS);
+
+        // Chama a função na montagem do componente
+        updateAOS();
+
+        // Remove o evento ao desmontar o componente
+        return () => {
+            window.removeEventListener("resize", updateAOS);
+        };
+    }, []);
+
+
     return (
         <>
             <ParaquemAll>
                 <ParaquemTexts>
-                    <h1>Para quem <b>nós somos?</b></h1>
+                    <h1 data-aos="fade-up" data-aos-delay="100">Para quem <b>nós somos?</b></h1>
                 </ParaquemTexts>
 
                 <ParaquemCards>
-                    <ParaquemCard>
+                    <ParaquemCard data-aos="fade-right" data-aos-delay="400">
                         <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1734959436/pessoas1_mzx60k.jpg" />
                     </ParaquemCard>
                     <CardParaquem 
                     borderRadius="15px"
                     bgColor="var(--color--black)"
                     bBackground="linear-gradient(90deg, var(--color--purple), #dbdbdb, var(--color--blue))"
-                    icon={BsBag}   
+                    icon={BsSuitcaseLg}   
                     boldText="Empresas"
-                    normalText="que querem aumentar suas vendas"
+                    normalText="que querem crescer no mercado"
                     />
 
                     <CardParaquem 
                     borderRadius="15px"
                     bgColor="var(--color--purple)"
                     bBackground="linear-gradient(90deg, #dbdbdb, var(--color--blue))"
-                    icon={BsBag}   
+                    icon={BsPeople}   
                     boldText="Pessoas"
                     normalText="que querem aumentar sua visibilidade"
                     />
@@ -151,7 +183,7 @@ const Paraquem = () => {
                     bgColor="var(--color--blue)"
                     bBackground="linear-gradient(90deg, var(--color--purple), #dbdbdb, var(--color--blue))"
                     icon={BsBag}   
-                    boldText="Empresas"
+                    boldText="Lojas"
                     normalText="que querem aumentar suas vendas"
                     />
 
@@ -159,12 +191,12 @@ const Paraquem = () => {
                     borderRadius="15px"
                     bgColor="var(--color--gray)"
                     bBackground="linear-gradient(90deg, #dbdbdb, var(--color--blue))"
-                    icon={BsBag}   
-                    boldText="Pessoas"
-                    normalText="que querem aumentar sua visibilidade"
+                    icon={BsGem}   
+                    boldText="Todos"
+                    normalText="que querem evoluir seu negócio de patamar"
                     />
 
-                    <ParaquemCard2>
+                    <ParaquemCard2 data-aos="fade-left" data-aos-delay="400">
                         <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1734959437/pessoas2_rcc7yv.jpg" />
                     </ParaquemCard2>
                 </ParaquemCards2>

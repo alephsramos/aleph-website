@@ -10,7 +10,7 @@ export const Card = styled.div`
   height: 350px;
   border-radius: ${(props) => props.borderRadius || "20px"};
   background-color: ${(props) => props.bgColor || "var(--color--black)"};
-  padding: 20px;
+  padding: 30px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -78,15 +78,16 @@ const CardParaquem = ({
   }) => {
     return (
       <Card
+        data-aos="fade-up" data-aos-delay="200"
         borderRadius={borderRadius}
         bgColor={bgColor}
         bBackground={bBackground}
       >
-        <a href="#">
+        <a href="#" data-aos="fade-up" data-aos-delay="200">
           {/* Se a prop “icon” for passada, usa ela; se não, usa um ícone default (BsPersonWorkspace) */}
           {Icon ? <Icon /> : <BsPersonWorkspace />}
         </a>
-        <h4>
+        <h4 data-aos="fade-up" data-aos-delay="400">
           {/* Se não passar nada pra boldText, exibe “Texto em Negrito” como placeholder */}
           <b>{boldText || "Texto em Negrito"}</b>
           {/* Se não passar nada para normalText, exibe esse texto como placeholder */}

@@ -27,7 +27,7 @@ const HeaderContainer = styled.header`
   }
 
   /* Transição suave para subir/descer */
-  transition: transform 0.4s ease;
+  transition: transform 2s ease;
 
   /* Quando scrolling = true, o header sobe (-100%) */
   /* Quando scrolling = false, ele volta para 0 */
@@ -78,7 +78,7 @@ function Header() {
       timerRef.current = setTimeout(() => {
         // 3 segundos depois de parar de rolar, header desce
         setScrolling(false)
-      }, 1000)
+      }, 200)
     }
 
     window.addEventListener("scroll", handleScroll)

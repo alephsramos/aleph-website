@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled, {keyframes} from "styled-components";
 import Button03 from "../../components/Buttons/button03";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, FreeMode, Pagination } from "swiper/modules"; // para autoplay
 import "swiper/css"; // CSS base do Swiper
 import "swiper/css/pagination";
+
+import AOS from "aos";
+import "aos/dist/aos.css"; 
 
 import { BsArrowDown } from "react-icons/bs";
 
@@ -123,7 +126,7 @@ const PortfolioCarrossel = styled.div`
         left: 0;
         position: absolute;
         z-index: 2;
-        background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 90%, rgba(255, 255, 255, 1) 100%);
+        background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 5%, rgba(255, 255, 255, 0) 95%, rgba(255, 255, 255, 1) 100%);
         pointer-events: none;
     }
 
@@ -134,7 +137,8 @@ const PortfolioCarrossel = styled.div`
     }
 
     & > div img {
-        width: 600px;
+        width: 90%;
+        margin-left: 5%;
         height: auto;
         object-fit: contain;
     }
@@ -157,20 +161,48 @@ const PortfolioSeta = styled.div`
 
 
 const Portfolio = () => {
+
+    useEffect(() => {
+        const updateAOS = () => {
+            const duration = window.innerWidth > 800 ? 1500 : 800; // Define a duração com base na largura da tela
+
+            AOS.init({
+                duration: duration, // Define a duração dinamicamente
+                offset: 20,         // Distância do scroll para ativar a animação
+                easing: "ease-in-out", // Tipo de animação
+                once: true,         // Se a animação ocorre apenas uma vez
+            });
+
+            AOS.refresh(); // Atualiza as animações ao mudar as configurações
+        };
+
+        // Adiciona um evento para atualizar a configuração ao redimensionar a janela
+        window.addEventListener("resize", updateAOS);
+
+        // Chama a função na montagem do componente
+        updateAOS();
+
+        // Remove o evento ao desmontar o componente
+        return () => {
+            window.removeEventListener("resize", updateAOS);
+        };
+    }, []);
+
+
     return (
         <>
             <PortfolioAll>
                 <PortfolioTexts>
                     <div>
-                        <h1><b>As empresas</b> sempres nos escolhem</h1>
-                        <p>Escolher a qualidade é a melhor escolha, veja nossos <a href="#">pacotes.</a></p>
+                        <h1 data-aos="fade-up-right" data-aos-delay="100"><b>As empresas</b> sempres nos escolhem</h1>
+                        <p data-aos="fade-up" data-aos-delay="300">Escolher a qualidade é a melhor escolha, veja nossos <a href="#">pacotes.</a></p>
                     </div>
-                    <div>
+                    <div data-aos="fade-in" data-aos-delay="500">
                         <Button03 />
                     </div>
                 </PortfolioTexts>
 
-                <PortfolioCarrossel>
+                <PortfolioCarrossel data-aos="fade-up-right" data-aos-delay="300">
                 <Swiper
                     modules={[Autoplay, FreeMode, Pagination]} 
                     loop={true}
@@ -296,7 +328,7 @@ const Portfolio = () => {
                 </Swiper>
                 </PortfolioCarrossel>
 
-                <PortfolioSeta>
+                <PortfolioSeta data-aos="fade-down" data-aos-delay="200">
                     <a href="#">
                         <BsArrowDown />
                     </a>
