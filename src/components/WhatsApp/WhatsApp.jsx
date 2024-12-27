@@ -301,7 +301,7 @@ const WhatsAppButton = ({ footerRendered }) => {
 
   return (
     <ButtonContainer>
-      <Button onClick={() => window.open(whatsappLink, "_blank")} id="clickwpp">
+      <Button onClick={() => window.open(whatsappLink, "_blank")} id="clickwpp" data-aos="fade-up" data-aos-delay="200">
         <FaWhatsapp id="clickwpp"/>
       </Button>
       {showPopup && (

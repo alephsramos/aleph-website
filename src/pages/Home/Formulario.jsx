@@ -251,32 +251,32 @@ const Formulario = () => {
 
                 <FormSection>
                     <FormTexts>
-                        <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1735248380/white_mkxq1r.png" />
-                        <h1>Entre em <b>contato</b> conosco</h1>
-                        <p>Ao preencher o formulário, você está de acordo com os nossos termos de serviço, e politica de dados</p>
+                        <img data-aos="fade-up" data-aos-delay="100" src="https://res.cloudinary.com/dabucfkmg/image/upload/v1735248380/white_mkxq1r.png" />
+                        <h1 data-aos="fade-up-right" data-aos-delay="200">Entre em <b>contato</b> conosco</h1>
+                        <p data-aos="fade-up-right" data-aos-delay="400">Ao preencher o formulário, você está de acordo com os nossos termos de serviço, e politica de dados</p>
 
                         <form id="contactForm">
-                            <label>
+                            <label data-aos="fade-up" data-aos-delay="600">
                                 Seu Nome
                                 <input type="text" id="name" placeholder="Aleph Silva Ramos" required/>
                             </label>
-                            <label>
+                            <label data-aos="fade-up" data-aos-delay="400">
                                 Seu e-mail
                                 <input type="email" id="email" placeholder="aleph@gmail.com" required/>
                             </label>
-                            <label>
+                            <label data-aos="fade-up" data-aos-delay="200">
                                 WhatsApp
                                 <input type="tel" id="tel" placeholder="24981411940" required/>
                             </label>
 
-                            <button type="submit">Enviar e entrar em contato</button>
+                            <button type="submit" data-aos="fade-in" data-aos-delay="1000">Enviar e entrar em contato</button>
 
-                            <span>*Usaremos essas informações apenas para fins de contato</span>
+                            <span data-aos="fade-up" data-aos-delay="1500">*Usaremos essas informações apenas para fins de contato</span>
                         </form>
                     </FormTexts>
 
                     <FormImage>
-                        <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1735223665/mockupWpp_1_nlq60u.png" />
+                        <img data-aos="fade-up-right" data-aos-delay="600" src="https://res.cloudinary.com/dabucfkmg/image/upload/v1735223665/mockupWpp_1_nlq60u.png" />
                     </FormImage>
 
                     <Footer />

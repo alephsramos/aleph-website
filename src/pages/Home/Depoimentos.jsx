@@ -107,21 +107,21 @@ const Depoimentos = () => {
         <>
             <DepoimentosAll>
 
-                <DepoimentosIlha>
-                    <h2>Depoimentos</h2>
+                <DepoimentosIlha data-aos="fade-down" data-aos-delay="100">
+                    <h2 data-aos="zoom-in" data-aos-delay="300">Depoimentos</h2>
                 </DepoimentosIlha>
 
-                <DepoimentosSeta>
+                <DepoimentosSeta data-aos="fade-down" data-aos-delay="300">
                     <a href="#">
                         <BsArrowDown />
                     </a>
                 </DepoimentosSeta>
 
                 <DepoimentosTitle>
-                    <h1>Não tenha dúvidas, <b>escolha o certo!</b></h1>
+                    <h1 data-aos="fade-up" data-aos-delay="400">Não tenha dúvidas, <b>escolha o certo!</b></h1>
                 </DepoimentosTitle>
 
-                <DepoimentosCarrossel>
+                <DepoimentosCarrossel data-aos="fade-up" data-aos-delay="400">
                     <Swiper
                         modules={[Autoplay, Pagination]} // Inclui os módulos Autoplay, FreeMode e Pagination
                         loop={true} // Loop infinito
@@ -146,48 +146,58 @@ const Depoimentos = () => {
                     >
                     <SwiperSlide>
                         <CardDepoimento 
-                            logo="https://res.cloudinary.com/dabucfkmg/image/upload/v1734817357/logoHeader_h5hxl2.png"
+                            logo="https://res.cloudinary.com/dabucfkmg/image/upload/v1735332714/6_bv5zu4.svg"
                             nota="4.9"
-                            empresa="Aleph Company"
-                            depoimento="Criei diversos sites com o aleph e sempre tive qualidade e tempo de entrega de acordo como sempre quis... Criei diversos sites com o aleph e sempre tive qualidade e tempo de entrega de acordo como sempre quis... Criei diversos sites com o aleph e sempre tive qualidade e tempo de entrega de acordo como sempre quis..."
-                            />
+                            empresa="Le Ange"
+                            depoimento="Nosso site ficou simplesmente perfeito! Ele reflete o charme, sofisticação e o acolhimento que queríamos transmitir para nossos hóspedes. A experiência com o Aleph foi impecável, desde o design até o suporte pós-lançamento. Recomendo de olhos fechados!"
+                        />
                     </SwiperSlide>
 
                     <SwiperSlide>
                         <CardDepoimento 
-                            logo="https://res.cloudinary.com/dabucfkmg/image/upload/v1734817357/logoHeader_h5hxl2.png"
-                            nota="4.9"
-                            empresa="Aleph Company"
-                            depoimento="Criei diversos sites com o aleph e sempre tive qualidade e tempo de entrega de acordo como sempre quis... Criei diversos sites com o aleph e sempre tive qualidade e tempo de entrega de acordo como sempre quis..."
-                            />
+                            logo="https://res.cloudinary.com/dabucfkmg/image/upload/v1735332713/5_tnvyoj.svg"
+                            nota="4.7"
+                            empresa="Al Lox"
+                            depoimento="Precisávamos de um site que fosse moderno, funcional e ao mesmo tempo destacasse nossos produtos eletrônicos. O Aleph superou todas as expectativas! O design ficou incrível e a navegação é super intuitiva, o que aumentou nossas vendas online."
+                        />
                     </SwiperSlide>
 
                     <SwiperSlide>
                         <CardDepoimento 
-                            logo="https://res.cloudinary.com/dabucfkmg/image/upload/v1734817357/logoHeader_h5hxl2.png"
+                            logo="https://res.cloudinary.com/dabucfkmg/image/upload/v1735332714/7_berqb9.svg"
                             nota="4.9"
-                            empresa="Aleph Company"
-                            depoimento="Criei diversos sites com o aleph e sempre tive qualidade e tempo de entrega de acordo como sempre quis..."
-                            />
+                            empresa="Life Green"
+                            depoimento="O site desenvolvido pelo Aleph conseguiu traduzir perfeitamente nossa missão de sustentabilidade. Ficamos impressionados com o cuidado nos detalhes e o alinhamento com nossos valores. Muito bom mesmo!"
+                        />
                     </SwiperSlide>
 
                     <SwiperSlide>
                         <CardDepoimento 
-                            logo="https://res.cloudinary.com/dabucfkmg/image/upload/v1734817357/logoHeader_h5hxl2.png"
-                            nota="4.9"
-                            empresa="Aleph Company"
-                            depoimento="Criei diversos sites com o aleph e sempre tive qualidade e tempo de entrega de acordo como sempre quis... Criei diversos sites com o aleph e sempre tive qualidade e tempo de entrega de acordo como sempre quis..."
-                            />
+                            logo="https://res.cloudinary.com/dabucfkmg/image/upload/v1735332714/4_teeinx.svg"
+                            nota="4.6"
+                            empresa="WizardZ"
+                            depoimento="Como agência de marketing, precisávamos de um site que destacasse nossa criatividade. O Aleph criou algo que não apenas impressiona visualmente, mas também é altamente funcional. A entrega foi rápida e o suporte constante é ótimo!"
+                        />
                     </SwiperSlide>
 
                     <SwiperSlide>
                         <CardDepoimento 
-                            logo="https://res.cloudinary.com/dabucfkmg/image/upload/v1734817357/logoHeader_h5hxl2.png"
+                            logo="https://res.cloudinary.com/dabucfkmg/image/upload/v1735332713/3_qckj5u.svg"
                             nota="4.9"
-                            empresa="Aleph Company"
-                            depoimento="Criei diversos sites com o aleph e sempre tive qualidade e tempo de entrega de acordo como sempre quis..."
-                            />
+                            empresa="Etech"
+                            depoimento="Para uma escola online como a nossa, um site bem estruturado é essencial. O Aleph entregou uma plataforma educativa completa, com design intuitivo e ferramentas que facilitam a experiência dos alunos. Estamos muito satisfeitos com o resultado!"
+                        />
                     </SwiperSlide>
+
+                    <SwiperSlide>
+                        <CardDepoimento 
+                            logo="https://res.cloudinary.com/dabucfkmg/image/upload/v1735332713/2_xqs2va.svg"
+                            nota="4.9"
+                            empresa="Meal Monkey"
+                            depoimento="O Aleph transformou nosso site em uma verdadeira extensão da nossa marca! Agora temos um espaço que não só facilita pedidos online, mas também encanta nossos clientes com um design moderno e funcional. Um investimento que valeu a pena!"
+                        />
+                    </SwiperSlide>
+
                 </Swiper>
                 </DepoimentosCarrossel>
 

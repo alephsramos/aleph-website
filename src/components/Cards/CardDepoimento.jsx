@@ -9,7 +9,7 @@ const Card = styled.div`
     padding: 30px;
     width: 100%;
     height: auto;
-    gap: 30px;
+    gap: 20px;
     background-color: #353535;
     border-radius: 20px;
 `
@@ -17,10 +17,13 @@ const Card = styled.div`
 const CardTopo = styled.div`
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
+    margin-bottom: -10px;
 
     & > img {
         object-fit: contain;
+        width: 100px;
     }
 
     & > div {

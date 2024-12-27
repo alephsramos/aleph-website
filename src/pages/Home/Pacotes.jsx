@@ -79,72 +79,67 @@ const Pacotes = () => {
             <PacotesAll>
 
                 <PacotesTitle>
-                    <h1>O que <b>você busca</b>, escolha abaixo:</h1>
+                    <h1 data-aos="fade-up" data-aos-delay="100">O que <b>você busca</b>, escolha abaixo:</h1>
                 </PacotesTitle>
 
                 <PacotesContainer>
-                    <div>
-                        <CardPacote 
-                        promoBold="3 MESES"
-                        promo="de manutenção grátis"
-                        valor="R$ 890,90"
-                        servico="E-commerce"
-                        listItems={[
-                          "Ideal para capturar leads",
-                          "Converter leads em vendas orgânicas",
-                          "Aumentar visibilidade online",
-                          "Garantir suporte e manutenção",
-                          "Garantir suporte e manutenção",
-                          "Garantir suporte e manutenção",
-                          "Garantir suporte e manutenção",
-                          "Garantir suporte e manutenção",
-                          "Garantir suporte e manutenção",
-                          "Garantir suporte e manutenção",
-                          "Garantir suporte e manutenção",
-                        ]}
-                        />
-                    </div>
-
-                    <div>
+                    <div data-aos="fade-up-right" data-aos-delay="200">
                         <CardPacote 
                         promoBold="3 MESES"
                         promo="de manutenção grátis"
                         valor="R$ 890,90"
                         servico="Landing Page"
                         listItems={[
-                          "Ideal para capturar leads",
-                          "Converter leads em vendas orgânicas",
-                          "Aumentar visibilidade online",
-                          "Garantir suporte e manutenção",
-                          "Garantir suporte e manutenção",
-                          "Garantir suporte e manutenção",
-                          "Garantir suporte e manutenção",
-                          "Garantir suporte e manutenção",
-                          "Garantir suporte e manutenção",
-                          "Garantir suporte e manutenção",
-                          "Garantir suporte e manutenção",
+                          "Alta conversão",
+                          "Tempo de carregamento veloz",
+                          "Versátilidade de design",
+                          "Instalação de Pixel",
+                          "Aumentar a visibilidade online",
+                          "Aumento de leads qualificados",
+                          "Design responsivo ( mobile-first )",
+                          "Otimização para SEO",
+                          "Integração com ferramentas de automação de marketing",
+                          "Geração de tráfego pago eficaz"
                         ]}
                         />
                     </div>
 
-                    <div>
+                    <div  data-aos="fade-up" data-aos-delay="200">
                         <CardPacote 
                         promoBold="3 MESES"
                         promo="de manutenção grátis"
-                        valor="R$ 890,90"
+                        valor="R$ 1290,90"
                         servico="Institucional"
                         listItems={[
-                          "Ideal para capturar leads",
-                          "Converter leads em vendas orgânicas",
-                          "Aumentar visibilidade online",
-                          "Garantir suporte e manutenção",
-                          "Garantir suporte e manutenção",
-                          "Garantir suporte e manutenção",
-                          "Garantir suporte e manutenção",
-                          "Garantir suporte e manutenção",
-                          "Garantir suporte e manutenção",
-                          "Garantir suporte e manutenção",
-                          "Garantir suporte e manutenção",
+                          "Posicionamento de marca",
+                          "Versatilidade de design",
+                          "Instalação de Pixel",
+                          "Apresentação de equipe e valores da empresa",
+                          "Integração com redes sociais",
+                          "Seções interativas (ex.: FAQ, chat ao vivo)",
+                          "Blog ou seção de noticias",
+                          "Facilitação de contato (formulários e links rápidos)",
+                          "Geração de tráfego pago eficaz"
+                        ]}
+                        />
+                    </div>
+
+                    <div data-aos="fade-up-left" data-aos-delay="200">
+                        <CardPacote 
+                        promoBold="3 MESES"
+                        promo="de manutenção grátis"
+                        valor="R$ 1890,90"
+                        servico="E-commerce"
+                        listItems={[
+                          "Alto número de vendas",
+                          "Sistemas fácil de manipular",
+                          "Instalação de Pixel",
+                          "Função de recomendação de produtos",
+                          "Carrinho de compras otimizado",
+                          "Pagamento integrado e seguro",
+                          "Monitoramento de comportamento do usúarios",
+                          "Ofertas personalizadas e promoções",
+                          "Sistema de reviews e avaliações de produtos",
                         ]}
                         />
                     </div>

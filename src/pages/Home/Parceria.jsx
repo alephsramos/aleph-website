@@ -160,27 +160,27 @@ const Parceria = () => {
 
                     <ParceriaTitle>
 
-                        <h1>Torne-se nosso parceiro</h1>
-                        <p>Se você está buscando criar mais de 1 site, oferecemos uma proposta para você, se tornando nosso parceiro, você garante preços exclusivos</p>
-                        <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1735248919/whitePacerias_x9oj45.png" />
+                        <h1 data-aos="fade-up-right" data-aos-delay="100">Torne-se nosso parceiro</h1>
+                        <p  data-aos="fade-up" data-aos-delay="200">Se você está buscando criar mais de 1 site, oferecemos uma proposta para você, se tornando nosso parceiro, você garante preços exclusivos</p>
+                        <img  data-aos="fade-in" data-aos-delay="600" src="https://res.cloudinary.com/dabucfkmg/image/upload/v1735248919/whitePacerias_x9oj45.png" />
 
                     </ParceriaTitle>
 
                     <ParceriaLista>
                         <ol>
-                            <li>
+                            <li data-aos="fade-up" data-aos-delay="200">
                                 <BsCash />
                                 Descontos exclusivos
                             </li>
-                            <li>
+                            <li data-aos="fade-up" data-aos-delay="300">
                                 <BsShieldLock  />
                                 Manutenção estendida
                             </li>
-                            <li>
+                            <li data-aos="fade-up" data-aos-delay="400">
                                 <BsAward />
                                 Prioridade de entrega
                             </li>
-                            <li>
+                            <li data-aos="fade-up" data-aos-delay="500">
                                 <BsBuildings />
                                 Feito para empresas
                             </li>

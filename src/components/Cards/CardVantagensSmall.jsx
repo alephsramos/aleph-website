@@ -19,6 +19,7 @@ const CardContainer = styled.div`
   @media (max-width: 768px){
     width: 100%;
     height: 220px;
+    gap: 15px;
   }
 
   & > h1{

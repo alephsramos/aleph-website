@@ -122,7 +122,7 @@ const Paraquem = () => {
 
     useEffect(() => {
         const updateAOS = () => {
-            const duration = window.innerWidth > 800 ? 1500 : 800; // Define a duração com base na largura da tela
+            const duration = window.innerWidth > 1000 ? 1500 : 1000; // Define a duração com base na largura da tela
 
             AOS.init({
                 duration: duration, // Define a duração dinamicamente

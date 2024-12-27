@@ -171,15 +171,15 @@ const FAQ = () => {
                 <FaqSection>
 
                     <FaqTitle>
-                        <h1>Ficou com dúvidas?</h1>
-                        <p>Veja as perguntas mais recorrentes</p>
+                        <h1 data-aos="fade-down" data-aos-delay="100">Ficou com dúvidas?</h1>
+                        <p data-aos="fade-in" data-aos-delay="500">Veja as perguntas mais recorrentes</p>
                     </FaqTitle>
 
                     <FaqPerguntas>
-                        <div>
+                        <div data-aos="fade-up" data-aos-delay="200">
                             <OpenText items={textItems} onTextClick={handleTextClick} />
                         </div>
-                        <div>
+                        <div data-aos="fade-up" data-aos-delay="200">
                             <OpenText items={textItems2} onTextClick={handleTextClick} />
                         </div>
                     </FaqPerguntas>

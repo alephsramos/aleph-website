@@ -133,10 +133,10 @@ const Beneficios = () => {
     const [activeIndex, setActiveIndex] = useState(0);
 
     const textItems = [
-      { title: "Comunicação facilitada", text: "Aqui você resolve tudo diretamente com o desenvolvedor, o que você precisar e quando precisar, trazendo mais eficiência e clareza em suas necessidades" },
-      { title: "Manutenção gratuita", text: "Garantimos suporte gratuito por 12 meses." },
-      { title: "Aprenda a mexer no seu site", text: "Receba treinamentos para gerenciar o seu site." },
-      { title: "Descontos em outros serviços", text: "Aproveite descontos exclusivos." },
+        { title: "Exclusividade", text: "Contato direto com o desenvolvedor para atendimento ágil e personalizado." },
+        { title: "Manutenção gratuita", text: "Suporte completo por 12 meses, sem custos extras." },
+        { title: "Aprenda a mexer no seu site", text: "Treinamento prático para você gerenciar tudo com facilidade." },
+        { title: "Descontos em outros serviços", text: "Acesso a condições especiais em serviços adicionais." },        
     ];
   
     const imageUrls = [
@@ -159,16 +159,16 @@ const Beneficios = () => {
                 <BeneficiosSection>
 
                     <BeneficiosTitle>
-                        <h1><b>Para te motivar</b>, dedicamos alguns benefícios a você</h1>
+                        <h1 data-aos="fade-up-right" data-aos-delay="100"><b>Para te motivar</b>, dedicamos alguns benefícios a você</h1>
 
-                        <div>
+                        <div data-aos="fade-up" data-aos-delay="200">
                             <OpenText items={textItems} onTextClick={handleTextClick} />
                         </div>
 
                         <Button01 />
                     </BeneficiosTitle>
 
-                    <BeneficiosImage>
+                    <BeneficiosImage data-aos="fade-up-left" data-aos-delay="200">
                         <ImageDisplay images={imageUrls} activeIndex={activeIndex} />
                     </BeneficiosImage>
 

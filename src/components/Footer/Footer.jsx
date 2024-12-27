@@ -66,9 +66,9 @@ const Footer = () => {
     return (
         <>
             <FooterContainer>
-                <p>Todos os direitos reservados | desde 2024</p>
-                <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1735248623/iconColorido_bdgxgi.png" />
-                <p>
+                <p data-aos="fade-left" data-aos-delay="200">Todos os direitos reservados | desde 2024</p>
+                <img data-aos="fade-up" data-aos-delay="300"src="https://res.cloudinary.com/dabucfkmg/image/upload/v1735248623/iconColorido_bdgxgi.png" />
+                <p data-aos="fade-right" data-aos-delay="400">
                 Desenvolvido por <a href="#"> Aleph </a>
                 </p>
 
