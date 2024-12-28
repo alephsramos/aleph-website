@@ -194,8 +194,23 @@ const InicialImage = styled.div`
         height: 100%;
         object-fit: contain;
         background-color: transparent;
+        -webkit-overflow-scrolling: touch;
+        -webkit-backface-visibility: hidden;
         filter: drop-shadow(0 0 10px rgba(225, 255, 255, 0.4)) drop-shadow(0 0 20px #D552D040) drop-shadow(0 0 30px #5339DF40);
         transition: filter 0.3s ease;
+        position: relative;
+
+        & > video::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-color: transparent;
+            pointer-events: none;
+        }
 
         @media (max-width: 768px) {
             width: 65%!important;
