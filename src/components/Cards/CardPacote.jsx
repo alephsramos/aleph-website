@@ -109,7 +109,7 @@ const CardBlack = styled.div`
 const CardList = styled.div`
   border-radius: 0 0 20px 20px;
   padding: 20px;
-  background-color: #5339df10;
+  background-color: #D552D005;
   margin-top: -20px;
 
   & > ol {

@@ -196,25 +196,9 @@ const InicialImage = styled.div`
         width: 55%!important;
         height: 100%;
         object-fit: contain;
-        background-color: transparent!important;
-        -webkit-overflow-scrolling: touch!important;
-        -webkit-backface-visibility: hidden!important;
-        -webkit-transform: translate3d(0, 0, 0)!important; 
         filter: drop-shadow(0 0 10px rgba(225, 255, 255, 0.4)) drop-shadow(0 0 20px #D552D040) drop-shadow(0 0 30px #5339DF40);
         transition: filter 0.3s ease;
         position: relative;
-
-        & > video::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            background-color: transparent;
-            pointer-events: none;
-        }
 
         @media (max-width: 768px) {
             display: none;
@@ -425,7 +409,7 @@ useEffect(() => {
                         autoPlay
                         muted
                         playsInline
-                        src="https://res.cloudinary.com/dabucfkmg/video/upload/v1735397679/semfundo_keds6p.webm"
+                        src="https://res.cloudinary.com/dabucfkmg/video/upload/v1735398678/Video-Home_zdu370.webm"
                         style={{ width: "100%", height: "auto" }}
                     >
                         Seu navegador não suporta o elemento de vídeo.

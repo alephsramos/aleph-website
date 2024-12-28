@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
 const ImageWrapper = styled.div`
@@ -12,21 +12,33 @@ const ImageWrapper = styled.div`
     max-width: 100%;
     max-height: 100%;
     border-radius: 8px;
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
     object-fit: contain;
+    opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
   }
 `;
 
 const ImageDisplay = ({ images, activeIndex }) => {
-  console.log("Active Index:", activeIndex);
-  console.log("Images Array:", images);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    // Faz o fade-out
+    setIsVisible(false);
+
+    // Aguarda a transição para iniciar o fade-in
+    const timeout = setTimeout(() => {
+      setIsVisible(true);
+    }, 50);
+
+    return () => clearTimeout(timeout);
+  }, [activeIndex]);
 
   if (activeIndex === null || activeIndex < 0 || activeIndex >= images.length) {
-    return <div>Nenhuma imagem selecionada.</div>; // Mensagem para depuração
+    return <div>Nenhuma imagem selecionada.</div>;
   }
 
   return (
-    <ImageWrapper>
+    <ImageWrapper isVisible={isVisible}>
       <img src={images[activeIndex]} alt={`Imagem ${activeIndex + 1}`} />
     </ImageWrapper>
   );

@@ -131,26 +131,25 @@ const BeneficiosImage = styled.div`
 
 const Beneficios = () => {
 
-    const [activeIndex, setActiveIndex] = useState(0);
-
-    const textItems = [
-        { title: "Exclusividade", text: "Contato direto com o desenvolvedor para atendimento ágil e personalizado." },
-        { title: "Manutenção gratuita", text: "Suporte completo por 12 meses, sem custos extras." },
-        { title: "Aprenda a mexer no seu site", text: "Treinamento prático para você gerenciar tudo com facilidade." },
-        { title: "Descontos em outros serviços", text: "Acesso a condições especiais em serviços adicionais." },        
-    ];
-  
-    const imageUrls = [
-      "https://res.cloudinary.com/dabucfkmg/image/upload/v1735406828/1_wpksrg.png",
-      "https://res.cloudinary.com/dabucfkmg/image/upload/v1735406829/2_yx40ez.png",
-      "https://res.cloudinary.com/dabucfkmg/image/upload/v1735406829/3_dvzidx.png",
-      "https://res.cloudinary.com/dabucfkmg/image/upload/v1735406829/4_izdnqm.png",
-    ];
-  
-    const handleTextClick = (index) => {
-        console.log(`Texto clicado: ${index}`);
-        setActiveIndex(index);
-      };
+        const [activeIndex, setActiveIndex] = useState(0);
+      
+        const textItems = [
+          { title: "Exclusividade", text: "Contato direto com o desenvolvedor para atendimento ágil e personalizado." },
+          { title: "Manutenção gratuita", text: "Suporte completo por 12 meses, sem custos extras." },
+          { title: "Aprenda a mexer no seu site", text: "Treinamento prático para você gerenciar tudo com facilidade." },
+          { title: "Descontos em outros serviços", text: "Acesso a condições especiais em serviços adicionais." },
+        ];
+      
+        const imageUrls = [
+          "https://res.cloudinary.com/dabucfkmg/image/upload/v1735406828/1_wpksrg.png",
+          "https://res.cloudinary.com/dabucfkmg/image/upload/v1735406829/2_yx40ez.png",
+          "https://res.cloudinary.com/dabucfkmg/image/upload/v1735406829/3_dvzidx.png",
+          "https://res.cloudinary.com/dabucfkmg/image/upload/v1735406829/4_izdnqm.png",
+        ];
+      
+        const handleTextClick = (index) => {
+          setActiveIndex(index);
+        };
 
     return (
         <>
