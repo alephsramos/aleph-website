@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styled, {keyframes} from "styled-components";
 import Button01 from "../../components/Buttons/button01";
 import Button02 from "../../components/Buttons/button02";
@@ -60,7 +60,7 @@ const InicialContainer = styled.section`
     @media (max-width: 768px) {
         flex-direction: column-reverse;
         height: 100dvh;
-        padding: 10% 5%;
+        padding: 5% 5%;
         background: #000;
     }
 
@@ -189,12 +189,26 @@ const InicialImage = styled.div`
         width: 80%;
     }
 
-    & > img{
-        width: 100%;
+    & > video {
+        width: 55%!important;
         height: 100%;
         object-fit: contain;
+        background-color: transparent;
+        filter: drop-shadow(0 0 10px rgba(225, 255, 255, 0.4)) drop-shadow(0 0 20px #D552D040) drop-shadow(0 0 30px #5339DF40);
+        transition: filter 0.3s ease;
+
+        @media (max-width: 768px) {
+            width: 65%!important;
+        }
     }
-`
+
+    & > img {
+        width: 95%!important;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 8px; 
+    }
+`;
 
 const InicialDiv = styled.div`
     width: 30%;
@@ -321,6 +335,25 @@ const InicialDiv = styled.div`
 `
 
 const Inicial = () => {
+
+    const videoRef = useRef(null);
+    const [showImage, setShowImage] = useState(false);
+
+    useEffect(() => {
+        const video = videoRef.current;
+
+        if (video) {
+            const handleEnded = () => {
+                setShowImage(true); // Troca o estado para mostrar a imagem
+            };
+
+            video.addEventListener("ended", handleEnded);
+
+            return () => {
+                video.removeEventListener("ended", handleEnded);
+            };
+        }
+    }, []);
     
     return (
         <>
@@ -345,8 +378,29 @@ const Inicial = () => {
                         </article>
                     </InicialDiv>
                 </InicialTexts>
-                <InicialImage>
-                    <img data-aos="fade-up-right" data-aos-delay="0" src="https://res.cloudinary.com/dabucfkmg/image/upload/v1734822642/mockupSite2_1_ggycxy.png" />
+                <InicialImage
+                data-aos="fade-in" 
+                data-aos-delay="300"
+                data-aos-duration="2000"
+                >
+                    {showImage ? (
+                    <img
+                        src="https://res.cloudinary.com/dabucfkmg/image/upload/v1734822642/mockupSite2_1_ggycxy.png"
+                        alt="Final do vídeo"
+                        style={{ width: "100%", height: "auto" }}
+                    />
+                ) : (
+                    <video
+                        ref={videoRef}
+                        autoPlay
+                        muted
+                        playsInline
+                        src="https://res.cloudinary.com/dabucfkmg/video/upload/v1735397679/semfundo_keds6p.webm"
+                        style={{ width: "100%", height: "auto" }}
+                    >
+                        Seu navegador não suporta o elemento de vídeo.
+                    </video>
+                )}
                 </InicialImage>
             </InicialContainer>
         </>

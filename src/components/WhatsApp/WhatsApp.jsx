@@ -49,7 +49,7 @@ const Popup = styled.div`
   right: 50px;
   width: 300px;
   padding: 10px 20px 20px 20px ;
-  background-color: #D552D020;
+  background-color: #ffffff10;
   backdrop-filter: blur(2px);
   border-radius: 15px 15px 0 15px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
@@ -84,8 +84,7 @@ const CloseButton = styled.button`
 `;
 
 const MessagesContainer = styled.div`
-  background-color: #D552D020;
-  backdrop-filter: blur(10px);
+  background-color: #fbfbfb;
   border-radius: 10px;
   padding: 10px;
   max-height: 300px;
@@ -113,6 +112,7 @@ const ProfilePicture = styled.img`
   margin-left: ${(props) => (props.sent ? "8px" : "0")};
   background-color: var(--color--white);
   padding: 3px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
 `;
 
 const MessageBox = styled.div`
@@ -180,9 +180,8 @@ const Input = styled.input`
   border-radius: 10px;
   font-size: 12px;
   font-family: var(--font--poppins)!important;
-  background: #ffffff05;
-  backdrop-filter: blur(1px);
-  color: var(--color--white);
+  background: #ffffff;
+  color: var(--color--purple);
   width: 70%;
 
   &::placeholder{
@@ -227,7 +226,7 @@ const WhatsAppButton = ({ footerRendered }) => {
           sent: false,
         },
       ]);
-    }, 100); // 30 segundos (30000 ms)
+    }, 45000); // 30 segundos (30000 ms)
   
     // cleanup
     return () => clearTimeout(timer);
