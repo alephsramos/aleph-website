@@ -224,6 +224,10 @@ const InicialImage = styled.div`
         height: 100%;
         object-fit: contain;
         border-radius: 8px; 
+
+        @media (max-width: 768px){
+            width: 80%!important;
+        }
     }
 `;
 
