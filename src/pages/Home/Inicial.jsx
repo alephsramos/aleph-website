@@ -186,7 +186,7 @@ const InicialImage = styled.div`
     z-index: 2;
     
     @media (max-width: 768px) {
-        width: 80%;
+        width: 100%;
     }
 
     & > video {
@@ -405,7 +405,7 @@ useEffect(() => {
                 <InicialImage
                 data-aos="fade-in" 
                 data-aos-delay="300"
-                data-aos-duration="2000"
+                data-aos-duration="1000"
                 >
                     {showImage ? (
                     <img
