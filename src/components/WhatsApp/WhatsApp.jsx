@@ -49,8 +49,8 @@ const Popup = styled.div`
   right: 50px;
   width: 300px;
   padding: 10px 20px 20px 20px ;
-  background-color: #35353520;
-  backdrop-filter: blur(5px);
+  background-color: #D552D020;
+  backdrop-filter: blur(2px);
   border-radius: 15px 15px 0 15px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
   animation: ${popupAnimation} 0.5s ease-in-out;
@@ -84,7 +84,8 @@ const CloseButton = styled.button`
 `;
 
 const MessagesContainer = styled.div`
-background-color: var(--color--white);
+  background-color: #D552D020;
+  backdrop-filter: blur(10px);
   border-radius: 10px;
   padding: 10px;
   max-height: 300px;
@@ -107,16 +108,18 @@ const MessageRow = styled.div`
 const ProfilePicture = styled.img`
   width: 20px;
   height: 20px;
-  border-radius: 50%;
+  border-radius: 50px 50px 0px 50px ;
   margin-right: ${(props) => (props.sent ? "0" : "8px")};
   margin-left: ${(props) => (props.sent ? "8px" : "0")};
+  background-color: var(--color--white);
+  padding: 3px;
 `;
 
 const MessageBox = styled.div`
   display: flex;
   flex-direction: column;
   background-color: ${(props) => (props.sent ? "#dcf8c6" : "#ffffff")};
-  border-radius: 10px;
+  border-radius: 10px ;
   padding: 8px;
   max-width: 70%;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
@@ -167,6 +170,7 @@ const InputContainer = styled.div`
   display: flex;
   gap: 10px;
   font-family: var(--font--poppins)!important;
+  width: 100%;
 `;
 
 const Input = styled.input`
@@ -179,6 +183,7 @@ const Input = styled.input`
   background: #ffffff05;
   backdrop-filter: blur(1px);
   color: var(--color--white);
+  width: 70%;
 
   &::placeholder{
     font-size: 10px!important;
@@ -196,6 +201,7 @@ const SendButton = styled.button`
   cursor: pointer;
   font-family: var(--font--poppins)!important;
   font-weight: 400;
+  width: 30%;
 `;
 
 const WhatsAppButton = ({ footerRendered }) => {
@@ -221,7 +227,7 @@ const WhatsAppButton = ({ footerRendered }) => {
           sent: false,
         },
       ]);
-    }, 45000); // 30 segundos (30000 ms)
+    }, 100); // 30 segundos (30000 ms)
   
     // cleanup
     return () => clearTimeout(timer);

@@ -38,6 +38,7 @@ const BeneficiosContainer = styled.section`
     height: auto;
     z-index: 2;
     padding: 5% 0;
+    overflow: hidden;
 
     @media (max-width: 768px){
     background: #000;

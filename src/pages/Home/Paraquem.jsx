@@ -1,12 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 import CardParaquem from "../../components/Cards/CardParaquem";
 
 import { BsBag, BsGem, BsPeople, BsSuitcaseLg } from "react-icons/bs";
-
-import AOS from "aos";
-import "aos/dist/aos.css"; 
-
 
 const ParaquemAll = styled.section `
     width: 100%;
@@ -18,7 +14,7 @@ const ParaquemAll = styled.section `
     justify-content: center;
     flex-direction: column;
     gap: 50px;
-    overflow-x: hidden;
+    overflow: hidden;
 
     @media (max-width: 768px) {
         padding: 0 2.5% 10% 2.5%;
@@ -119,33 +115,6 @@ const ParaquemCard2 = styled.div`
 `
 
 const Paraquem = () => {
-
-    useEffect(() => {
-        const updateAOS = () => {
-            const duration = window.innerWidth > 1000 ? 1500 : 1000; // Define a duração com base na largura da tela
-
-            AOS.init({
-                duration: duration, // Define a duração dinamicamente
-                offset: 20,         // Distância do scroll para ativar a animação
-                easing: "ease-in-out", // Tipo de animação
-                once: true,         // Se a animação ocorre apenas uma vez
-            });
-
-            AOS.refresh(); // Atualiza as animações ao mudar as configurações
-        };
-
-        // Adiciona um evento para atualizar a configuração ao redimensionar a janela
-        window.addEventListener("resize", updateAOS);
-
-        // Chama a função na montagem do componente
-        updateAOS();
-
-        // Remove o evento ao desmontar o componente
-        return () => {
-            window.removeEventListener("resize", updateAOS);
-        };
-    }, []);
-
 
     return (
         <>

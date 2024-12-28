@@ -83,7 +83,7 @@ const Pacotes = () => {
                 </PacotesTitle>
 
                 <PacotesContainer>
-                    <div data-aos="fade-up-right" data-aos-delay="200">
+                    <div data-aos="fade-up" data-aos-delay="200">
                         <CardPacote 
                         promoBold="3 MESES"
                         promo="de manutenção grátis"
@@ -124,7 +124,7 @@ const Pacotes = () => {
                         />
                     </div>
 
-                    <div data-aos="fade-up-left" data-aos-delay="200">
+                    <div data-aos="fade-up" data-aos-delay="200">
                         <CardPacote 
                         promoBold="3 MESES"
                         promo="de manutenção grátis"
