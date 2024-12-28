@@ -215,6 +215,7 @@ const InicialImage = styled.div`
 
         @media (max-width: 768px) {
             width: 65%!important;
+            display: none;
         }
     }
 
@@ -353,24 +354,31 @@ const InicialDiv = styled.div`
 const Inicial = () => {
 
     const videoRef = useRef(null);
-    const [showImage, setShowImage] = useState(false);
+const [showImage, setShowImage] = useState(false);
 
-    useEffect(() => {
-        const video = videoRef.current;
+useEffect(() => {
+    const video = videoRef.current;
 
-        if (video) {
-            const handleEnded = () => {
-                setShowImage(true); // Troca o estado para mostrar a imagem
-            };
+    // Verificar se o dispositivo é mobile com base no tamanho da tela
+    const isMobile = window.innerWidth <= 768;
 
-            video.addEventListener("ended", handleEnded);
+    if (isMobile) {
+        setShowImage(true); // Mostra a imagem desde o início no mobile
+        return;
+    }
 
-            return () => {
-                video.removeEventListener("ended", handleEnded);
-            };
-        }
-    }, []);
-    
+    if (video) {
+        const handleEnded = () => {
+            setShowImage(true); // Troca o estado para mostrar a imagem
+        };
+
+        video.addEventListener("ended", handleEnded);
+
+        return () => {
+            video.removeEventListener("ended", handleEnded);
+        };
+    }
+}, []);
     return (
         <>
             <BackgroundHome></BackgroundHome>
