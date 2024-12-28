@@ -141,10 +141,10 @@ const Beneficios = () => {
     ];
   
     const imageUrls = [
-      "https://res.cloudinary.com/dabucfkmg/image/upload/v1734955150/mockupCell_aefv8r.png",
-      "https://res.cloudinary.com/dabucfkmg/image/upload/v1734955151/mockupDesktop_pxgaar.png",
-      "https://res.cloudinary.com/dabucfkmg/image/upload/v1734955150/mockupCell_aefv8r.png",
-      "https://res.cloudinary.com/dabucfkmg/image/upload/v1734955151/mockupDesktop_pxgaar.png",
+      "https://res.cloudinary.com/dabucfkmg/image/upload/v1735406828/1_wpksrg.png",
+      "https://res.cloudinary.com/dabucfkmg/image/upload/v1735406829/2_yx40ez.png",
+      "https://res.cloudinary.com/dabucfkmg/image/upload/v1735406829/3_dvzidx.png",
+      "https://res.cloudinary.com/dabucfkmg/image/upload/v1735406829/4_izdnqm.png",
     ];
   
     const handleTextClick = (index) => {

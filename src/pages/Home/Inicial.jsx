@@ -187,6 +187,9 @@ const InicialImage = styled.div`
     
     @media (max-width: 768px) {
         width: 100%;
+        margin-top: 50px!important;
+        height: 70%!important;
+        margin-bottom: -20px!important;
     }
 
     & > video {
@@ -214,7 +217,6 @@ const InicialImage = styled.div`
         }
 
         @media (max-width: 768px) {
-            width: 65%!important;
             display: none;
         }
     }
@@ -226,7 +228,7 @@ const InicialImage = styled.div`
         border-radius: 8px; 
 
         @media (max-width: 768px){
-            width: 80%!important;
+            width: 90%!important;
         }
     }
 `;
