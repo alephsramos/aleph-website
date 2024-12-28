@@ -212,7 +212,7 @@ const WhatsAppButton = ({ footerRendered }) => {
   const [phoneRequested, setPhoneRequested] = useState(false);
   const [finalStage, setFinalStage] = useState(false); 
 
-  const whatsappLink = "https://wa.link/dojlwi"; 
+  const whatsappLink = "https://w.app/5AaZMJ"; 
   const botProfilePic = "https://res.cloudinary.com/dabucfkmg/image/upload/v1735248623/iconColorido_bdgxgi.png";
   const webhookURL = "SEU_WEBHOOK_URL";
 
