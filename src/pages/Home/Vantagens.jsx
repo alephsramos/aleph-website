@@ -8,9 +8,6 @@ import "swiper/css";
 import "swiper/css/pagination"; // Estilos da paginação
 import { Autoplay, FreeMode, Pagination } from "swiper/modules"; 
 
-import AOS from "aos";
-import "aos/dist/aos.css"; 
-
 const VantagensBackground = styled.div`
   width: 100%;
   height: 100%;
@@ -172,32 +169,6 @@ const StyledSwiperSlide = styled(SwiperSlide)`
 `;
 
 const Vantagens = () => {
-
-   useEffect(() => {
-        const updateAOS = () => {
-            const duration = window.innerWidth > 1000 ? 1500 : 1000; // Define a duração com base na largura da tela
-
-            AOS.init({
-                duration: duration, // Define a duração dinamicamente
-                offset: 20,         // Distância do scroll para ativar a animação
-                easing: "ease-in-out", // Tipo de animação
-                once: true,         // Se a animação ocorre apenas uma vez
-            });
-
-            AOS.refresh(); // Atualiza as animações ao mudar as configurações
-        };
-
-        // Adiciona um evento para atualizar a configuração ao redimensionar a janela
-        window.addEventListener("resize", updateAOS);
-
-        // Chama a função na montagem do componente
-        updateAOS();
-
-        // Remove o evento ao desmontar o componente
-        return () => {
-            window.removeEventListener("resize", updateAOS);
-        };
-    }, []);
 
   return (
     <>

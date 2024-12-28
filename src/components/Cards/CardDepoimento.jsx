@@ -33,18 +33,18 @@ const CardTopo = styled.div`
         gap: 10px;
 
         & > img {
-            width: 25px;
+            width: 20px;
             height: auto;
             object-fit: contain;
         }
 
         & > p {
-            background: linear-gradient(90deg, var(--color--purple), var(--color--blue));
+            background: linear-gradient(90deg, var(--color--purple), #dbdbdb, var(--color--blue));
             -webkit-background-clip: text;
             color: transparent;
             font-family: var(--font--poppins);
             font-size: 20px;
-            font-weight: 600;
+            font-weight: 400;
         }
     }
 `
@@ -85,7 +85,7 @@ const CardDepoimento = ({ logo, nota, empresa, depoimento}) => {
                 <CardTopo>
                     <img src={logo}/>
                     <div>
-                        <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1735248623/iconColorido_bdgxgi.png" />
+                        <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1735248918/iconX_ybqztg.png" />
                         <p>{nota}</p> 
                     </div>
                 </CardTopo>

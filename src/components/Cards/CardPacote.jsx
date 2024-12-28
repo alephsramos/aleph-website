@@ -90,9 +90,9 @@ const CardBlack = styled.div`
     }
 
     & > span {
-      font-family: var(--font--roboto);
+      font-family: var(--font--poppins);
       font-weight: 400;
-      font-size: 18px;
+      font-size: 20px;
       background: linear-gradient(
         90deg,
         var(--color--purple),

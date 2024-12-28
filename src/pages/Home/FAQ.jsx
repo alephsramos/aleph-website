@@ -154,7 +154,7 @@ const FAQ = () => {
             text: "Crio sites otimizados para vendas, com integração a meios de pagamento, carrinho de compras e estratégias para aumentar sua conversão." 
         },
         { 
-            title: "Posso colocar quantas seções no meu site?", 
+            title: "Quantas seções tem no site?", 
             text: "Sim! Seu site será personalizado, com quantas seções forem necessárias para atender às suas necessidades e objetivos." 
         },
         { 
@@ -166,7 +166,7 @@ const FAQ = () => {
 
     const textItems2 = [
         { 
-            title: "O valor mínimo para um site é quanto?", 
+            title: "O valor mínimo para um site é?", 
             text: "O valor inicial depende da complexidade do projeto, mas ofereço opções acessíveis para atender diferentes necessidades." 
         },
         { 

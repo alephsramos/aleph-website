@@ -1,10 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styled, {keyframes} from "styled-components";
 import Button01 from "../../components/Buttons/button01";
 import Button02 from "../../components/Buttons/button02";
-
-import AOS from "aos";
-import "aos/dist/aos.css"; 
 
 const zoomAnimation = keyframes`
   0% {
@@ -324,34 +321,7 @@ const InicialDiv = styled.div`
 `
 
 const Inicial = () => {
-
-    useEffect(() => {
-        const updateAOS = () => {
-            const duration = window.innerWidth > 1000 ? 1500 : 1000; // Define a duração com base na largura da tela
-
-            AOS.init({
-                duration: duration, // Define a duração dinamicamente
-                offset: 20,         // Distância do scroll para ativar a animação
-                easing: "ease-in-out", // Tipo de animação
-                once: true,         // Se a animação ocorre apenas uma vez
-            });
-
-            AOS.refresh(); // Atualiza as animações ao mudar as configurações
-        };
-
-        // Adiciona um evento para atualizar a configuração ao redimensionar a janela
-        window.addEventListener("resize", updateAOS);
-
-        // Chama a função na montagem do componente
-        updateAOS();
-
-        // Remove o evento ao desmontar o componente
-        return () => {
-            window.removeEventListener("resize", updateAOS);
-        };
-    }, []);
     
-
     return (
         <>
             <BackgroundHome></BackgroundHome>

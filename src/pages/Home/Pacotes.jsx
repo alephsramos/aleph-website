@@ -87,7 +87,7 @@ const Pacotes = () => {
                         <CardPacote 
                         promoBold="3 MESES"
                         promo="de manutenção grátis"
-                        valor="R$ 890,90"
+                        valor="R$890,90"
                         servico="Landing Page"
                         listItems={[
                           "Alta conversão",
@@ -108,7 +108,7 @@ const Pacotes = () => {
                         <CardPacote 
                         promoBold="3 MESES"
                         promo="de manutenção grátis"
-                        valor="R$ 1290,90"
+                        valor="R$1290,90"
                         servico="Institucional"
                         listItems={[
                           "Posicionamento de marca",
@@ -128,7 +128,7 @@ const Pacotes = () => {
                         <CardPacote 
                         promoBold="3 MESES"
                         promo="de manutenção grátis"
-                        valor="R$ 1890,90"
+                        valor="R$1890,90"
                         servico="E-commerce"
                         listItems={[
                           "Alto número de vendas",
