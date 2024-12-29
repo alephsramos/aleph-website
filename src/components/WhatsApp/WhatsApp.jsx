@@ -3,6 +3,9 @@ import { FaWhatsapp } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 import styled, { keyframes } from "styled-components";
 
+import { database } from "../../firebaseConfig"; // Certifique-se de ter configurado o Firebase
+import { ref, push } from "firebase/database";
+
 // Animações
 const popupAnimation = keyframes`
   from {
@@ -210,28 +213,11 @@ const WhatsAppButton = ({ footerRendered }) => {
   const [isTyping, setIsTyping] = useState(false);
   const [userPhone, setUserPhone] = useState("Número inválido");
   const [phoneRequested, setPhoneRequested] = useState(false);
-  const [finalStage, setFinalStage] = useState(false); 
+  const [finalStage, setFinalStage] = useState(false);
 
-  const whatsappLink = "https://w.app/5AaZMJ"; 
-  const botProfilePic = "https://res.cloudinary.com/dabucfkmg/image/upload/v1735248623/iconColorido_bdgxgi.png";
-  const webhookURL = "SEU_WEBHOOK_URL";
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowPopup(true);
-      setMessages([
-        {
-          id: 1,
-          text: "Olá! Percebemos que você estava navegando pelo site. 🐶🐾\n\nComo podemos te ajudar? 🤗",
-          sent: false,
-        },
-      ]);
-    }, 45000); // 30 segundos (30000 ms)
-  
-    // cleanup
-    return () => clearTimeout(timer);
-  }, []); // <-- sem dependências
-  
+  const whatsappLink = "https://w.app/5AaZMJ";
+  const botProfilePic =
+    "https://res.cloudinary.com/dabucfkmg/image/upload/v1735248623/iconColorido_bdgxgi.png";
 
   const handleSend = async () => {
     if (message.trim() === "") return;
@@ -248,7 +234,11 @@ const WhatsAppButton = ({ footerRendered }) => {
         setIsTyping(false);
         setMessages((prev) => [
           ...prev,
-          { id: Date.now(), text: "Entendo, estamos aqui para te ajudar da melhor forma possível! 😁\n\nPara um atendimento mais rápido, poderia me informar o seu número de WhatsApp? 🙂‍↕", sent: false },
+          {
+            id: Date.now(),
+            text: "Entendo, estamos aqui para te ajudar da melhor forma possível! 😁\n\nPara um atendimento mais rápido, poderia me informar o seu número de WhatsApp? 🙂",
+            sent: false,
+          },
         ]);
         setPhoneRequested(true);
       }, 1500);
@@ -259,37 +249,37 @@ const WhatsAppButton = ({ footerRendered }) => {
       const isNumber = /^\d+$/.test(currentMessage);
       const phoneToStore = isNumber ? currentMessage : "Número inválido";
       setUserPhone(phoneToStore);
-
-      // Empurrar o número para o dataLayer
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({
-        event: "userPhoneCaptured",
-        phoneNumber: phoneToStore
-      });
-
+  
+      if (isNumber) {
+          try {
+              const date = new Date().toISOString().split("T")[0]; // Formato YYYY-MM-DD
+              const dbRef = ref(database, `data/${date}/whatsappNumbers`);
+              await push(dbRef, { phone: phoneToStore, timestamp: Date.now() });
+              console.log("Número salvo no Firebase:", phoneToStore);
+          } catch (error) {
+              console.error("Erro ao salvar o número no Firebase:", error);
+          }
+      }
+  
       setTimeout(() => {
-        setIsTyping(false);
-        setMessages((prev) => [
-          ...prev,
-          {
-            id: Date.now(),
-            text: isNumber
-            ? (
-                <span>
-                  Muito obrigado, aumigo🐕!<br /><br />Vamos entrar em contato com você em breve. 
-                </span>
-              )
-            : "Você não informou um número válido.",
-            sent: false,
-          },
-        ]);
-        setTimeout(() => {
-          setFinalStage(true);
-        }, 500);
-        setPhoneRequested(false);
+          setIsTyping(false);
+          setMessages((prev) => [
+              ...prev,
+              {
+                  id: Date.now(),
+                  text: isNumber
+                      ? "Muito obrigado! Entraremos em contato em breve. 📞"
+                      : "Você não informou um número válido.",
+                  sent: false,
+              },
+          ]);
+          setTimeout(() => {
+              setFinalStage(true);
+          }, 500);
+          setPhoneRequested(false);
       }, 1500);
       return;
-    }
+  }
 
     setIsTyping(false);
   };
@@ -304,10 +294,31 @@ const WhatsAppButton = ({ footerRendered }) => {
     setShowPopup(false);
   };
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowPopup(true);
+      setMessages([
+        {
+          id: 1,
+          text: "Olá! Percebemos que você estava navegando pelo site. 🐶🐾\n\nComo podemos te ajudar? 🤗",
+          sent: false,
+        },
+      ]);
+    }, 400); // 45 segundos
+
+    // cleanup
+    return () => clearTimeout(timer);
+  }, []); // <-- sem dependências
+
   return (
     <ButtonContainer>
-      <Button onClick={() => window.open(whatsappLink, "_blank")} id="clickwpp" data-aos="fade-up" data-aos-delay="200">
-        <FaWhatsapp id="clickwpp"/>
+      <Button
+        onClick={() => window.open(whatsappLink, "_blank")}
+        id="clickwpp"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <FaWhatsapp id="clickwpp" />
       </Button>
       {showPopup && (
         <Popup>

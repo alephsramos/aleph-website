@@ -1,6 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import Footer from "../../components/Footer/Footer";
+import useUTMs from "../../components/Form/UTM";
+
+import { database } from "../../firebaseConfig";
+import { ref, push } from "firebase/database";
 
 const FormBackground = styled.div`
   width: 100%;
@@ -244,6 +248,31 @@ const FormImage = styled.div`
 `
 
 const Formulario = () => {
+
+    const utms = useUTMs();
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+    
+        const formData = {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            tel: document.getElementById("tel").value,
+            ...utms,
+        };
+    
+        try {
+            const date = new Date().toISOString().split("T")[0]; // Formato YYYY-MM-DD
+            const dbRef = ref(database, `data/${date}/formSubmissions`);
+            await push(dbRef, formData);
+            alert("Dados do formulário enviados com sucesso!");
+        } catch (error) {
+            console.error("Erro ao salvar os dados do formulário:", error);
+            alert("Erro ao enviar os dados.");
+        }
+    };
+
+      
     return (
         <>
          <FormContainer>
@@ -255,7 +284,7 @@ const Formulario = () => {
                         <h1 data-aos="fade-up-right" data-aos-delay="200">Entre em <b>contato</b> conosco</h1>
                         <p data-aos="fade-up-right" data-aos-delay="400">Ao preencher o formulário, você está de acordo com os nossos termos de serviço, e politica de dados</p>
 
-                        <form id="contactForm">
+                        <form id="contactForm" onSubmit={handleSubmit}>
                             <label data-aos="fade-up" data-aos-delay="300">
                                 Seu Nome
                                 <input type="text" id="name" placeholder="Aleph Silva Ramos" required/>
