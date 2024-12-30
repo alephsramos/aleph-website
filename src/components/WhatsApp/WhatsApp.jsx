@@ -304,7 +304,7 @@ const WhatsAppButton = ({ footerRendered }) => {
           sent: false,
         },
       ]);
-    }, 400); // 45 segundos
+    }, 45000); // 45 segundos
 
     // cleanup
     return () => clearTimeout(timer);
