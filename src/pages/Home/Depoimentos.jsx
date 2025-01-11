@@ -118,7 +118,7 @@ const Depoimentos = () => {
                 </DepoimentosSeta>
 
                 <DepoimentosTitle>
-                    <h1 data-aos="fade-up" data-aos-delay="400">Não tenha dúvidas, <b>escolha o certo!</b></h1>
+                    <h1 data-aos="fade-up" data-aos-delay="400">Sem dúvidas, <b>escolha com confiança!</b></h1>
                 </DepoimentosTitle>
 
                 <DepoimentosCarrossel data-aos="fade-up" data-aos-delay="400">

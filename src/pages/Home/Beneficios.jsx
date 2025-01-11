@@ -134,9 +134,9 @@ const Beneficios = () => {
         const [activeIndex, setActiveIndex] = useState(0);
       
         const textItems = [
-          { title: "Exclusividade", text: "Contato direto com o desenvolvedor para atendimento ágil e personalizado." },
-          { title: "Manutenção gratuita", text: "Suporte completo por 12 meses, sem custos extras." },
-          { title: "Aprenda a mexer no seu site", text: "Treinamento prático para você gerenciar tudo com facilidade." },
+          { title: "Assistência direta", text: "Contato direto com o desenvolvedor para um atendimento ágil e personalizado." },
+          { title: "Manutenção gratuita", text: "Suporte técnico por 3 meses, sem custos extras." },
+          { title: "Aprenda a mexer no seu site", text: "Treinamento prático para você gerenciar seu site com facilidade." },
           { title: "Descontos em outros serviços", text: "Acesso a condições especiais em serviços adicionais." },
         ];
       
@@ -159,7 +159,7 @@ const Beneficios = () => {
                 <BeneficiosSection>
 
                     <BeneficiosTitle>
-                        <h1 data-aos="fade-up-right" data-aos-delay="100"><b>Para te motivar</b>, dedicamos alguns benefícios a você</h1>
+                        <h1 data-aos="fade-up-right" data-aos-delay="100"><b>Para te impulsionar</b>, preparamos alguns beneficios</h1>
 
                         <div data-aos="fade-up" data-aos-delay="200">
                             <OpenText items={textItems} onTextClick={handleTextClick} />

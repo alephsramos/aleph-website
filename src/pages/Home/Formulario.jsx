@@ -282,7 +282,7 @@ const Formulario = () => {
                     <FormTexts>
                         <img data-aos="fade-up" data-aos-delay="100" src="https://res.cloudinary.com/dabucfkmg/image/upload/v1735248380/white_mkxq1r.png" />
                         <h1 data-aos="fade-up-right" data-aos-delay="200">Entre em <b>contato</b> conosco</h1>
-                        <p data-aos="fade-up-right" data-aos-delay="400">Ao preencher o formulário, você está de acordo com os nossos termos de serviço, e politica de dados</p>
+                        <p data-aos="fade-up-right" data-aos-delay="400">Ao preencher o formulário, você concorda com nossos Termos de Serviço e nossa Política de Privacidade.</p>
 
                         <form id="contactForm" onSubmit={handleSubmit}>
                             <label data-aos="fade-up" data-aos-delay="300">
@@ -291,7 +291,7 @@ const Formulario = () => {
                             </label>
                             <label data-aos="fade-up" data-aos-delay="200">
                                 Seu e-mail
-                                <input type="email" id="email" placeholder="aleph@gmail.com" required/>
+                                <input type="email" id="email" placeholder="contato@alephsramos.com.br" required/>
                             </label>
                             <label data-aos="fade-up" data-aos-delay="100">
                                 WhatsApp

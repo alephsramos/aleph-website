@@ -300,7 +300,7 @@ const WhatsAppButton = ({ footerRendered }) => {
       setMessages([
         {
           id: 1,
-          text: "Olá! Percebemos que você estava navegando pelo site. 🐶🐾\n\nComo podemos te ajudar? 🤗",
+          text: "Olá! Percebemos que você estava navegando pelo site. \n\nComo podemos te ajudar? 🤗",
           sent: false,
         },
       ]);

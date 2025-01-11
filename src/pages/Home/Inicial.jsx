@@ -344,9 +344,9 @@ const InicialDiv = styled.div`
 const Inicial = () => {
 
     const videoRef = useRef(null);
-const [showImage, setShowImage] = useState(false);
+    const [showImage, setShowImage] = useState(false);
 
-useEffect(() => {
+    useEffect(() => {
     const video = videoRef.current;
 
     // Verificar se o dispositivo é mobile com base no tamanho da tela
@@ -375,12 +375,12 @@ useEffect(() => {
             <InicialContainer>
                 <InicialTexts>
                     <h1 data-aos="fade-up-right" data-aos-delay="100">Já imaginou ter um <b>site de altíssimo</b> padrão?</h1>
-                    <p data-aos="fade-up" data-aos-delay="200">Um site de altíssimo padrão é muito mais do que uma página na internet: é uma experiência online única, que combina layout refinado, tecnologia de ponta.</p>
+                    <p data-aos="fade-up" data-aos-delay="200">Na era digital, um site de alto padrão é o cartão de visitas do seu negócio. Combinando criatividade e tecnologia, desenvolvemos um site que não só representará a sua marca, como também elevará seu posicionamento no mercado.</p>
                     <div data-aos="fade-up" data-aos-delay="300">
-                        <Button01/>
+                        <Button01 />
                         <Button02 /> 
                     </div>
-                    <span data-aos="fade-in" data-aos-delay="1000">Todas as informações coletadas nesse site serão para fins de contato, seus dados estão protegidos.</span>
+                    <span data-aos="fade-in" data-aos-delay="1000">Todas as informações coletadas nesse site são, exclusivamente, para fins de contato, seus dados estão protegidos.</span>
                     <InicialDiv data-aos="fade-in" data-aos-delay="500">
                         <div></div>
                         <div></div>
@@ -388,7 +388,7 @@ useEffect(() => {
                         <div></div>
                         <article>
                             <span data-aos="fade-in" data-aos-delay="1000">4.9</span>
-                            <img data-aos="fade-in" data-aos-delay="1000" src="https://res.cloudinary.com/dabucfkmg/image/upload/v1735248918/iconX_ybqztg.png" /> 
+                            <img data-aos="fade-in" data-aos-delay="1000" src="https://res.cloudinary.com/dabucfkmg/image/upload/v1735248918/iconX_ybqztg.png" alt="icone de empresa aleph de desenvolvimento de sites web" loading="lazy"/> 
                         </article>
                     </InicialDiv>
                 </InicialTexts>
@@ -397,24 +397,11 @@ useEffect(() => {
                 data-aos-delay="300"
                 data-aos-duration="1000"
                 >
-                    {showImage ? (
                     <img
                         src="https://res.cloudinary.com/dabucfkmg/image/upload/v1734822642/mockupSite2_1_ggycxy.png"
-                        alt="Final do vídeo"
+                        alt="Foto de um site feito pelo Aleph Desenvolvedor Web"
                         style={{ width: "100%", height: "auto" }}
                     />
-                ) : (
-                    <video
-                        ref={videoRef}
-                        autoPlay
-                        muted
-                        playsInline
-                        src="https://res.cloudinary.com/dabucfkmg/video/upload/v1735398678/Video-Home_zdu370.webm"
-                        style={{ width: "100%", height: "auto" }}
-                    >
-                        Seu navegador não suporta o elemento de vídeo.
-                    </video>
-                )}
                 </InicialImage>
             </InicialContainer>
         </>

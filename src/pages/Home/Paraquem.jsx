@@ -162,7 +162,7 @@ const Paraquem = () => {
                     bBackground="linear-gradient(90deg, #dbdbdb, var(--color--blue))"
                     icon={BsGem}   
                     boldText="Todos"
-                    normalText="que querem evoluir seu negócio de patamar"
+                    normalText="que desejam expandir seu negócio"
                     />
 
                     <ParaquemCard2 data-aos="fade-left" data-aos-delay="400">

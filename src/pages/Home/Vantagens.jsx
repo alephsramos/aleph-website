@@ -178,7 +178,7 @@ const Vantagens = () => {
         <VantagensSection>
           <VantagensTitle>
             <h1 data-aos="fade-up-right" data-aos-delay="100">
-              <b>Vantagens</b> em ter um site conosco
+              O que <b>oferecemos:</b>
             </h1>
             <a href="#">
               <BsArrowRight data-aos="fade-in" data-aos-delay="400" />
@@ -213,11 +213,11 @@ const Vantagens = () => {
                 <div>
                   <CardVantagens
                     title="Velocidade"
-                    description=" Seus projetos são desenvolvidos com agilidade, garantindo a entrega rápida de sites funcionais e modernos, sem comprometer a qualidade. Ideal para quem precisa de resultados prontos no menor tempo possível."
+                    description="Aqui, seu site é desenvolvido com agilidade, garantindo uma entrega mais rápida, sem comprometer a qualidade. Ideal para quem busca resultados no menor tempo possível."
                   />
                   <CardVantagensSmall
                     title="Qualidade"
-                    description="Cada site criado reflete atenção aos detalhes, com design profissional e performance impecável."
+                    description="Cada site criado reflete máxima atenção aos detalhes, com design profissional e performance excepcional."
                   />
                 </div>
               </StyledSwiperSlide>
@@ -226,11 +226,11 @@ const Vantagens = () => {
                 <div>
                   <CardVantagensSmall
                     title="Otimização"
-                    description=" Seus sites são otimizados, garantindo carregamento rápido, navegação fluida e compatibilidade com todos os dispositivos"
+                    description=" Otimizamos seu site para garantir um carregamento rápido, além de navegação fluida e compatibilidade com todos os dispositivos."
                   />
                   <CardVantagens
                     title="SEO"
-                    description="Seus sites já são construídos com estratégias de SEO integradas, aumentando a visibilidade nos motores de busca e atraindo tráfego qualificado. Você não entrega só um site bonito, mas também eficaz."
+                    description="Seu site já é projetado com estratégias de SEO integradas, aumentando a visibilidade nos motores de busca e atraindo tráfego qualificado. Você não entrega só um site atrativo, mas também eficaz."
                   />
                 </div>
               </StyledSwiperSlide>
@@ -238,12 +238,12 @@ const Vantagens = () => {
               <StyledSwiperSlide>
                 <div>
                   <CardVantagens
-                    title="Autenticidade"
-                    description="Você cria sites únicos e personalizados, refletindo a identidade de cada cliente e diferenciando-se de modelos genéricos. Cada projeto é exclusivo, pensado para destacar o cliente no mercado."
+                    title="Exclusividade"
+                    description="Um site único e personalizado que reflete a identidade da sua marca e diferencia-se dos modelos genéricos atuais. Cada projeto é exclusivo, pensado para destacar você no mercado."
                   />
                   <CardVantagensSmall
-                    title="Versatilidade"
-                    description="Com a capacidade de atender diferentes nichos e demandas, seu site se adapta ao que deseja."
+                    title="Versatilidade" 
+                    description="Com a capacidade de atender diferentes nichos e demandas, desenvolvemos um site que se adapta ao que você escolher."
                   />
                 </div>
               </StyledSwiperSlide>
@@ -252,11 +252,11 @@ const Vantagens = () => {
                 <div>
                   <CardVantagensSmall
                     title="Comunicação"
-                    description="Você mantém uma comunicação clara e aberta durante todo o processo, garantindo que você esteja sempre informado e satisfeito com tudo."
+                    description="Mantemos uma comunicação clara e objetiva durante todo o processo de desenvolvimento, garantindo que você esteja sempre informado e satisfeito em cada etapa."
                   />
                   <CardVantagens
                     title="Completo"
-                    description="Solução completa, que vai além do design: desde registro de domínio e hospedagem até estratégias para redes sociais e integrações com ferramentas de marketing."
+                    description="Solução completa, que vai além do design: desde registro de domínio e hospedagem até estratégias para redes sociais e integrações com ferramentas de Marketing."
                   />
                 </div>
               </StyledSwiperSlide>
@@ -265,11 +265,11 @@ const Vantagens = () => {
                 <div>
                     <CardVantagens
                     title="Manutenção"
-                    description="Seus sites são desenvolvidos de forma que possam ser facilmente atualizados e mantidos, com suporte contínuo para garantir que tudo esteja sempre funcionando perfeitamente."
+                    description="Desenvolvemos seu site de forma que possa ser, facilmente, atualizado, com suporte  técnico para garantir que esteja funcionando perfeitamente." 
                   />
                   <CardVantagensSmall
-                    title="Escalabilidade"
-                    description="Seus sites prontos para crescer junto com o seu negócio, permitindo a adição de novas funcionalidades e se adaptando às demandas futuras do mercado."
+                    title="Crescimento"
+                    description="Um site criado para evoluir com o seu negócio: oferecemos flexibilidade para incorporar novas funcionalidades e atender às necessidades futuras do mercado."
                   />
                 </div>
               </StyledSwiperSlide>
@@ -278,11 +278,11 @@ const Vantagens = () => {
                 <div>
                   <CardVantagensSmall
                     title="Desempenho"
-                    description="Seus sites são projetados para desempenho máximo, com alta velocidade de carregamento."
+                    description="Projetamos seu site com foco em desempenho excepcional, garantindo alta velocidade de carregamento e uma navegação fluida, melhorando a experiência do seu possível cliente."
                   />
                   <CardVantagens
                     title="Vendas"
-                    description="Seus sites não são apenas vitrines, mas ferramentas estratégicas para aumentar as conversões e vendas, com design persuasivo, CTAs bem posicionados e integração com plataformas de pagamento."
+                    description="Seus site não é apenas uma vitrine virtual, mas também uma ferramenta estratégica para aumentar as conversões e vendas, com design convidativo, CTAs bem posicionadas e integração com plataformas de pagamento."
                   />
                   
                 </div>

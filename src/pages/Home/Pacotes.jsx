@@ -76,10 +76,10 @@ const PacotesContainer = styled.div`
 const Pacotes = () => {
     return (
         <>
-            <PacotesAll>
+            <PacotesAll id="pacotes">
 
                 <PacotesTitle>
-                    <h1 data-aos="fade-up" data-aos-delay="100">O que <b>você busca</b>, escolha abaixo:</h1>
+                    <h1 data-aos="fade-up" data-aos-delay="100">O que <b>você busca</b></h1>
                 </PacotesTitle>
 
                 <PacotesContainer>

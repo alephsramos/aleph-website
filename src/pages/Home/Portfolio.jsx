@@ -164,8 +164,8 @@ const Portfolio = () => {
             <PortfolioAll>
                 <PortfolioTexts>
                     <div>
-                        <h1 data-aos="fade-up-right" data-aos-delay="100"><b>As empresas</b> sempres nos escolhem</h1>
-                        <p data-aos="fade-up" data-aos-delay="300">Escolher a qualidade é a melhor escolha, veja nossos <a href="#">pacotes.</a></p>
+                        <h1 data-aos="fade-up-right" data-aos-delay="100"><b>A escolha certa</b> para quem busca qualidade</h1>
+                        <p data-aos="fade-up" data-aos-delay="300">Optar pela qualidade é a melhor decisão, confira nossos <a href="#pacotes">pacotes.</a></p>
                     </div>
                     <div data-aos="fade-in" data-aos-delay="500">
                         <Button03 />
