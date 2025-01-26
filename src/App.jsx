@@ -1,7 +1,7 @@
 
 import React, { useEffect } from "react";
 import Home from "./pages/Home/Home";
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 import './Styles/global.css';
 import './Styles/reset.css';
