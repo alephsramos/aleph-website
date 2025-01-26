@@ -399,7 +399,7 @@ const Inicial = () => {
                 data-aos-duration="1000"
                 >
                     <img
-                        src="/public/git-home.gif"
+                        src="../../../public/git-home.gif"
                         alt="Foto de um site feito pelo Aleph Desenvolvedor Web"
                         style={{ width: "100%", height: "auto" }}
                     />
