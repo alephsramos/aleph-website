@@ -80,7 +80,7 @@ const Button = styled.button`
     & > b {
         color: #fff;
         font-family: var(--font--poppins);
-        font-weight: 600;
+        font-weight: 400;
         font-size: 16px;
         transition: all 0.2s ease-in-out;
 
