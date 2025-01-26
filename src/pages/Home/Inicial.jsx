@@ -213,7 +213,7 @@ const InicialImage = styled.div`
 
         @media (max-width: 768px){
             width: 70%!important;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
     }
 `;
