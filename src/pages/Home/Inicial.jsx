@@ -206,13 +206,14 @@ const InicialImage = styled.div`
     }
 
     & > img {
-        width: 95%!important;
+        width: 85%!important;
         height: 100%;
         object-fit: contain;
         border-radius: 8px; 
 
         @media (max-width: 768px){
-            width: 90%!important;
+            width: 65%!important;
+            margin-bottom: 20px;
         }
     }
 `;
@@ -398,7 +399,7 @@ const Inicial = () => {
                 data-aos-duration="1000"
                 >
                     <img
-                        src="https://res.cloudinary.com/dabucfkmg/image/upload/v1734822642/mockupSite2_1_ggycxy.png"
+                        src="/public/git-home.gif"
                         alt="Foto de um site feito pelo Aleph Desenvolvedor Web"
                         style={{ width: "100%", height: "auto" }}
                     />
