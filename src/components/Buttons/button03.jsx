@@ -15,7 +15,7 @@ const Button = styled.button`
     transition: all 0.6s ease-in-out;
 
     @media (max-width: 768px) {
-        border-radius: 10px;
+        border-radius: 15px;
     }
 
     &::before {
@@ -74,6 +74,7 @@ const Button = styled.button`
         width: 20px;
         object-fit: contain;
         transition: all 0.2s ease-in-out;
+        filter: brightness(-500%) invert(100%);
     }
 
     & > b {

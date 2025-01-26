@@ -15,7 +15,7 @@ const Button = styled.button`
     transition: all 0.6s ease-in-out;
 
     @media (max-width: 768px) {
-        border-radius: 10px;
+        border-radius: 15px;
     }
 
     &::before {
