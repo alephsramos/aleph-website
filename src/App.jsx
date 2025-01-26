@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Home from "./pages/Home/Home";
 import { SpeedInsights } from "@vercel/speed-insights/react";
+import { Analytics } from "@vercel/analytics/react"
 
 import './Styles/global.css';
 import './Styles/reset.css';
@@ -9,6 +10,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 function App() {
+
   // Inicializando SpeedInsights
   SpeedInsights({
     beforeSend: (payload) => {
@@ -47,6 +49,7 @@ function App() {
   return (
     <>
       <Home />
+      <Analytics />
     </>
   );
 }
