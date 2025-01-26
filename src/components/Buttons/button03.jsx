@@ -55,7 +55,7 @@ const Button = styled.button`
 const Button03 = () => {
     return (
         <>
-            <Button id="click-button" data-aos="fade-up" data-aos-delay="200" onClick={() => { window.open("https://w.app/5AaZMJ", "_blank"); }}>
+            <Button id="click-button" data-aos="fade-up" data-aos-delay="200" onClick={() => { window.open("https://wa.me/24981411940", "_blank"); }}>
                 <b>Solicitar orçamento</b>
                 <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1735248625/iconWhite_muzw7l.png"  />
             </Button>
