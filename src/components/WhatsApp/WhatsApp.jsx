@@ -215,7 +215,7 @@ const WhatsAppButton = ({ footerRendered }) => {
   const [phoneRequested, setPhoneRequested] = useState(false);
   const [finalStage, setFinalStage] = useState(false);
 
-  const whatsappLink = "https://w.app/5AaZMJ";
+  const whatsappLink = "https://wa.me/24981411940";
   const botProfilePic =
     "https://res.cloudinary.com/dabucfkmg/image/upload/v1735248623/iconColorido_bdgxgi.png";
 
