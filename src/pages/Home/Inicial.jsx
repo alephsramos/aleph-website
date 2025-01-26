@@ -399,7 +399,7 @@ const Inicial = () => {
                 data-aos-duration="1000"
                 >
                     <img
-                        src="public/git-home.gif"
+                        src="https://res.cloudinary.com/dabucfkmg/image/upload/v1737860483/mockup-site_hjl0sa.gif"
                         alt="Foto de um site feito pelo Aleph Desenvolvedor Web"
                         style={{ width: "100%", height: "auto" }}
                     />
