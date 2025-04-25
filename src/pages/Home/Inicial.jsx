@@ -178,7 +178,7 @@ const InicialTexts = styled.div`
 
 const InicialImage = styled.div`
     width: 50%;
-    height: 100%;
+    height: 90%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -188,7 +188,7 @@ const InicialImage = styled.div`
     @media (max-width: 768px) {
         width: 100%;
         margin-top: 50px!important;
-        height: 70%!important;
+        height: 55%!important;
         margin-bottom: -20px!important;
     }
 
